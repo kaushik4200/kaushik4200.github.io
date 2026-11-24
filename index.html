@@ -1,0 +1,3179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Kaushik Dhara — Data &amp; Business Analyst Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Sai Kaushik Dhara, Data & Business Analyst based in Hyderabad, Telangana (Open to Relocation: Pan-India). Interactive Power BI, SQL, and Excel case studies."
+  />
+  <meta name="author" content="Sai Kaushik Dhara" />
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sai Kaushik Dhara — Data & Business Analyst Portfolio" />
+  <meta
+    property="og:description"
+    content="Transforming raw e-commerce, social, and market datasets into interactive Power BI dashboards, SQL insights, and executive decisions."
+  />
+  <meta property="og:url" content="https://kaushik4200.github.io" />
+
+  <!-- Custom Obsidian + Terminal Amber & Metric Emerald Inline SVG Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090B0E' stroke='%23F59E0B' stroke-width='3'/%3E%3Cpath d='M18 16h7v14l14-14h9L33 31l16 17h-9L25 32v16h-7V16z' fill='%23FBBF24'/%3E%3Ccircle cx='49' cy='17' r='4.5' fill='%2310B981'/%3E%3C/svg%3E"
+  />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+          colors: {
+            obsidian: '#090B0E',
+            surface: '#11161D',
+            surfaceElev: '#161D27',
+            borderHair: '#253040',
+            trackFill: '#1C2430',
+            trackBorder: '#2B3647',
+            amberTerm: '#F59E0B',
+            amberBright: '#FBBF24',
+            emeraldTerm: '#10B981',
+            emeraldBright: '#34D399',
+            coralAlert: '#FB7185',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* =====================================================================
+       FINANCIAL TERMINAL + WHISPER-SUBTLE DOT-GRID BLUEPRINT
+       ===================================================================== */
+    html,
+    body {
+      background-color: #090B0E;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+      background-attachment: fixed;
+    }
+
+    /* CRITICAL FIX 1: Guaranteed Full-Width Stacked Section Header Block */
+    .section-heading-block {
+      display: block;
+      width: 100%;
+      margin-bottom: 2.5rem;
+    }
+
+    /* CRITICAL FIX 2: Explicit Unmistakable Framed Repo Button */
+    .repo-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background-color: #161D27;
+      border: 1px solid #334155;
+      border-radius: 0.5rem;
+      padding: 0.625rem 0.875rem;
+      color: #CBD5E1;
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-decoration: none;
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    }
+
+    .repo-btn:hover {
+      border-color: #F59E0B;
+      color: #FBBF24;
+      background-color: #1C2533;
+      box-shadow: 0 0 16px -4px rgba(245, 158, 11, 0.55);
+    }
+
+    .repo-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Base Terminal Card */
+    .term-card {
+      background-color: #11161D;
+      border: 1px solid #253040;
+      transition: border-color 0.24s ease, background-color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .term-card:hover {
+      background-color: #161D27;
+      border-color: rgba(245, 158, 11, 0.55);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.9), 0 0 24px -14px rgba(245, 158, 11, 0.35);
+    }
+
+    /* Hero Interactive Stat Chips */
+    .stat-chip {
+      background-color: #11161D;
+      border: 1px solid #253040;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-chip:hover,
+    .stat-chip.is-active {
+      background-color: #161D27;
+      border-color: rgba(245, 158, 11, 0.78);
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px -10px rgba(245, 158, 11, 0.55);
+    }
+
+    .stat-chip-emerald:hover,
+    .stat-chip-emerald.is-active {
+      border-color: rgba(52, 211, 153, 0.8);
+      box-shadow: 0 0 20px -10px rgba(16, 185, 129, 0.55);
+    }
+
+    /* Terminal Blinking Cursor */
+    @keyframes termBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .term-cursor {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      background-color: #FBBF24;
+      vertical-align: middle;
+      margin-left: 3px;
+      border-radius: 1px;
+      animation: termBlink 1.05s steps(1, end) infinite;
+    }
+
+    /* =====================================================================
+       TECHNICAL ABILITIES — MOUSE-TRACKING RADIAL GLOW CARDS
+       ===================================================================== */
+    .glow-box {
+      position: relative;
+      background-color: #11161D;
+      border: 1px solid #253040;
+      overflow: hidden;
+      transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.26s ease, box-shadow 0.26s ease, background-color 0.26s ease;
+      --mouse-x: 50%;
+      --mouse-y: 0%;
+    }
+
+    .glow-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      opacity: 0.38;
+      transition: opacity 0.26s ease;
+      z-index: 2;
+    }
+
+    .glow-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.28s ease;
+      z-index: 1;
+    }
+
+    .glow-box:hover {
+      transform: translateY(-4px);
+      background-color: #161D27;
+    }
+
+    .glow-box:hover::before,
+    .glow-box:hover::after {
+      opacity: 1;
+    }
+
+    .glow-box-amber::before {
+      background: linear-gradient(90deg, transparent, #F59E0B, #FBBF24, transparent);
+    }
+
+    .glow-box-amber::after {
+      background: radial-gradient(360px circle at var(--mouse-x) var(--mouse-y), rgba(245, 158, 11, 0.18), transparent 65%);
+    }
+
+    .glow-box-amber:hover {
+      border-color: rgba(245, 158, 11, 0.75);
+      box-shadow: 0 22px 44px -22px rgba(0, 0, 0, 0.9), 0 0 30px -12px rgba(245, 158, 11, 0.45);
+    }
+
+    .glow-box-emerald::before {
+      background: linear-gradient(90deg, transparent, #10B981, #34D399, transparent);
+    }
+
+    .glow-box-emerald::after {
+      background: radial-gradient(360px circle at var(--mouse-x) var(--mouse-y), rgba(16, 185, 129, 0.18), transparent 65%);
+    }
+
+    .glow-box-emerald:hover {
+      border-color: rgba(52, 211, 153, 0.75);
+      box-shadow: 0 22px 44px -22px rgba(0, 0, 0, 0.9), 0 0 30px -12px rgba(16, 185, 129, 0.45);
+    }
+
+    .glow-box-dual::before {
+      background: linear-gradient(90deg, transparent, #F59E0B, #34D399, transparent);
+    }
+
+    .glow-box-dual::after {
+      background: radial-gradient(360px circle at var(--mouse-x) var(--mouse-y), rgba(245, 158, 11, 0.14), rgba(16, 185, 129, 0.09) 42%, transparent 68%);
+    }
+
+    .glow-box-dual:hover {
+      border-color: rgba(251, 191, 36, 0.72);
+      box-shadow: 0 22px 44px -22px rgba(0, 0, 0, 0.9), 0 0 28px -12px rgba(16, 185, 129, 0.36), 0 0 24px -14px rgba(245, 158, 11, 0.38);
+    }
+
+    /* Hover-Reactive Skill Pills */
+    .skill-pill {
+      background-color: #090B0E;
+      border: 1px solid #253040;
+      color: #CBD5E1;
+      transition: all 0.18s ease;
+    }
+
+    .skill-pill-amber:hover {
+      background-color: rgba(245, 158, 11, 0.14);
+      border-color: rgba(251, 191, 36, 0.78);
+      color: #F8FAFC;
+    }
+
+    .skill-pill-emerald:hover {
+      background-color: rgba(16, 185, 129, 0.14);
+      border-color: rgba(52, 211, 153, 0.78);
+      color: #F8FAFC;
+    }
+
+    /* High-Contrast Chart Tracks & Hover-First Modal Rows */
+    .chart-track {
+      background-color: #1C2430;
+      border: 1px solid #2B3647;
+    }
+
+    .interactive-row {
+      background-color: #090B0E;
+      border: 1px solid #253040;
+      transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .interactive-row:hover {
+      background-color: #161D27;
+      border-color: rgba(251, 191, 36, 0.78);
+      transform: translateX(3px);
+      box-shadow: 0 0 18px -8px rgba(245, 158, 11, 0.52);
+    }
+
+    .interactive-row:hover .row-title {
+      color: #F8FAFC;
+      font-weight: 700;
+    }
+
+    .interactive-row:hover .row-fill {
+      filter: brightness(1.18);
+    }
+
+    .interactive-row-emerald:hover {
+      border-color: rgba(52, 211, 153, 0.8);
+      box-shadow: 0 0 18px -8px rgba(16, 185, 129, 0.52);
+    }
+
+    .interactive-row-coral:hover {
+      border-color: rgba(251, 113, 133, 0.82);
+      box-shadow: 0 0 18px -8px rgba(251, 113, 133, 0.52);
+    }
+
+    /* Vertical Timeline Spine & Nodes */
+    .timeline-spine {
+      background: linear-gradient(180deg, #F59E0B 0%, #10B981 72%, rgba(16, 185, 129, 0.12) 100%);
+    }
+
+    .timeline-item:hover .timeline-dot-amber {
+      transform: scale(1.18);
+      box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.18), 0 0 18px rgba(251, 191, 36, 0.8);
+    }
+
+    .timeline-item:hover .timeline-dot-emerald {
+      transform: scale(1.18);
+      box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.18), 0 0 18px rgba(52, 211, 153, 0.8);
+    }
+
+    /* Interactive SVG Donut & Bar Hover Effects */
+    .donut-slice {
+      transform-origin: 75px 75px;
+      transition: transform 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .donut-slice.is-active {
+      transform: scale(1.06);
+      stroke-width: 20;
+      filter: brightness(1.18);
+      opacity: 1 !important;
+    }
+
+    .svg-bar-grp {
+      cursor: pointer;
+      transition: filter 0.18s ease;
+    }
+
+    .svg-bar-grp:hover {
+      filter: brightness(1.16) drop-shadow(0 0 8px rgba(251, 191, 36, 0.45));
+    }
+
+    @keyframes svgPulse {
+      0% { r: 6; opacity: 0.9; }
+      100% { r: 15; opacity: 0; }
+    }
+
+    .svg-pulse-ring {
+      animation: svgPulse 1.35s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    }
+
+    /* Modal Pop-In */
+    @keyframes modalPop {
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.988);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .modal-pop {
+      animation: modalPop 0.2s ease-out forwards;
+    }
+
+    /* Dark Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #090B0E;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #253040;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F59E0B;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-[#F8FAFC] selection:bg-amberTerm/30 selection:text-amberBright">
+  <!-- ===================================================================== -->
+  <!-- 1. STICKY NAVBAR & MOBILE DRAWER                                      -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-obsidian/90 backdrop-blur-xl border-b border-borderHair">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Brand Mark -->
+      <a href="#hero" class="font-mono text-sm sm:text-base font-bold tracking-wider flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-surface border border-borderHair group-hover:border-amberTerm/70 flex items-center justify-center text-amberBright transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 17l6-5-6-5M12 19h8" />
+          </svg>
+        </span>
+        <span class="flex items-center gap-1">
+          <span class="text-[#F8FAFC]">KAUSHIK</span>
+          <span class="text-[#94A3B8]">//</span>
+          <span class="text-amberBright">DATA</span>
+        </span>
+      </a>
+
+      <!-- Center Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#94A3B8]" aria-label="Primary Navigation">
+        <a href="#projects" class="hover:text-[#F8FAFC] transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-[#F8FAFC] transition-colors">Skills</a>
+        <a href="#timeline" class="hover:text-[#F8FAFC] transition-colors">Timeline</a>
+        <a href="#contact" class="hover:text-[#F8FAFC] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Actions: EXCLUSIVELY GitHub Icon, LinkedIn Icon & View Resume -->
+      <div class="flex items-center gap-2">
+        <a
+          href="https://github.com/kaushik4200"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Profile"
+          title="GitHub — kaushik4200"
+          class="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-lg bg-surface border border-borderHair text-[#CBD5E1] hover:text-amberBright hover:border-amberTerm/60 transition-all active:scale-95"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
+
+        <a
+          href="https://linkedin.com/in/kaushik-dhara"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
+          title="LinkedIn — /in/kaushik-dhara"
+          class="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-lg bg-surface border border-borderHair text-[#CBD5E1] hover:text-emeraldBright hover:border-emeraldTerm/60 transition-all active:scale-95"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          class="open-resume-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-lg font-mono text-xs font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition-all active:scale-95"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <polyline stroke-linecap="round" stroke-linejoin="round" points="14 2 14 8 20 8" />
+            <line stroke-linecap="round" stroke-linejoin="round" x1="16" y1="13" x2="8" y2="13" />
+            <line stroke-linecap="round" stroke-linejoin="round" x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+          <span>View Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          class="md:hidden p-2 rounded-lg bg-surface border border-borderHair text-[#F8FAFC] hover:border-amberTerm/60 transition"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Responsive Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-borderHair bg-surface/95 backdrop-blur-xl">
+      <div class="px-5 py-4 space-y-1.5 font-mono text-sm">
+        <a href="#projects" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-[#CBD5E1] hover:bg-obsidian hover:text-amberBright transition">01 // Projects</a>
+        <a href="#skills" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-[#CBD5E1] hover:bg-obsidian hover:text-amberBright transition">02 // Skills</a>
+        <a href="#timeline" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-[#CBD5E1] hover:bg-obsidian hover:text-amberBright transition">03 // Timeline</a>
+        <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-[#CBD5E1] hover:bg-obsidian hover:text-amberBright transition">04 // Contact</a>
+        <div class="pt-3 mt-2 border-t border-borderHair flex items-center gap-2">
+          <a
+            href="https://github.com/kaushik4200"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            class="mobile-nav-link inline-flex items-center justify-center w-11 h-11 rounded-lg bg-obsidian border border-borderHair text-[#CBD5E1] hover:text-amberBright transition shrink-0"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/kaushik-dhara"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            class="mobile-nav-link inline-flex items-center justify-center w-11 h-11 rounded-lg bg-obsidian border border-borderHair text-[#CBD5E1] hover:text-emeraldBright transition shrink-0"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <button
+            type="button"
+            class="open-resume-btn mobile-nav-link flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-amberTerm text-obsidian font-bold text-xs"
+          >
+            <span>View Resume</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-5 sm:px-8">
+    <!-- ===================================================================== -->
+    <!-- 2. HERO SECTION (#hero) — 2-COLUMN + INTERACTIVE LIVE QUERY TERMINAL  -->
+    <!-- ===================================================================== -->
+    <section id="hero" class="py-16 sm:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Column (6 cols) -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Location & Relocation Pill -->
+          <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface border border-borderHair">
+            <span class="relative flex h-2 w-2 shrink-0">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emeraldBright opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emeraldBright"></span>
+            </span>
+            <svg class="w-3.5 h-3.5 text-amberBright shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span class="font-mono text-xs text-[#CBD5E1]">
+              Hyderabad, Telangana <span class="text-[#94A3B8] mx-1">·</span>
+              <span class="text-emeraldBright font-medium">Open to Relocation: Pan-India</span>
+            </span>
+          </div>
+
+          <!-- Name & Role -->
+          <div class="space-y-2.5">
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-[#F8FAFC] leading-[1.08]">
+              Sai Kaushik Dhara
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-amberBright tracking-tight">
+              Data &amp; Business Analyst
+            </p>
+          </div>
+
+          <!-- Crisp 2-Line Bio -->
+          <p class="text-base text-[#CBD5E1] leading-relaxed max-w-xl">
+            Delivering executive business intelligence across e-commerce, social, and market datasets using SQL, Power BI, and Advanced Excel to drive revenue, retention, and expansion decisions.
+          </p>
+
+          <!-- STRICTLY TWO Hero CTAs (No GitHub or LinkedIn icons here) -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-1">
+            <a
+              href="#projects"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-mono text-xs sm:text-sm font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition-all active:scale-95 shadow-lg shadow-amberTerm/15"
+            >
+              <span>Explore Projects</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+
+            <button
+              type="button"
+              class="open-resume-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-mono text-xs sm:text-sm font-semibold bg-surface border border-borderHair text-[#F8FAFC] hover:border-amberTerm/60 hover:bg-surfaceElev transition-all active:scale-95"
+            >
+              <svg class="w-4 h-4 text-amberBright" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                <polyline stroke-linecap="round" stroke-linejoin="round" points="14 2 14 8 20 8" />
+              </svg>
+              <span>View Resume</span>
+            </button>
+          </div>
+
+          <!-- 3 Clickable Stat Chips (Power BI, SQL, Excel) -->
+          <div class="pt-5 border-t border-borderHair/80 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <button
+              type="button"
+              data-term-chip="amazon"
+              class="stat-chip is-active rounded-xl px-3.5 py-3 text-left flex items-center justify-between gap-2 group"
+            >
+              <div class="min-w-0">
+                <p class="font-mono text-xs font-extrabold text-[#F8FAFC] group-hover:text-amberBright transition-colors truncate">113K+ Orders · +43% YoY</p>
+                <p class="font-mono text-[11px] text-[#94A3B8] mt-0.5">Amazon · Power BI</p>
+              </div>
+              <svg class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-amberBright transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              data-term-chip="meta"
+              class="stat-chip stat-chip-emerald rounded-xl px-3.5 py-3 text-left flex items-center justify-between gap-2 group"
+            >
+              <div class="min-w-0">
+                <p class="font-mono text-xs font-extrabold text-[#F8FAFC] group-hover:text-emeraldBright transition-colors truncate">7-Table Schema · 77% Active</p>
+                <p class="font-mono text-[11px] text-[#94A3B8] mt-0.5">Meta · SQL</p>
+              </div>
+              <svg class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-emeraldBright transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              data-term-chip="zomato"
+              class="stat-chip rounded-xl px-3.5 py-3 text-left flex items-center justify-between gap-2 group"
+            >
+              <div class="min-w-0">
+                <p class="font-mono text-xs font-extrabold text-[#F8FAFC] group-hover:text-amberBright transition-colors truncate">9,551 Listings · +0.67★ Lift</p>
+                <p class="font-mono text-[11px] text-[#94A3B8] mt-0.5">Zomato · Excel</p>
+              </div>
+              <svg class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-amberBright transition-colors shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column (6 cols): Interactive Live Query Terminal -->
+        <div class="lg:col-span-6 relative">
+          <div
+            class="absolute -inset-3 rounded-3xl opacity-30 blur-2xl pointer-events-none"
+            style="background: radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.32), transparent 55%), radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.28), transparent 55%);"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative rounded-2xl bg-surface border border-borderHair shadow-2xl overflow-hidden">
+            <!-- Terminal Header -->
+            <div class="px-4 py-3 bg-surfaceElev border-b border-borderHair flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="w-2.5 h-2.5 rounded-full bg-coralAlert/85 shrink-0"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amberBright/85 shrink-0"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emeraldBright/85 shrink-0"></span>
+                <span class="ml-2 font-mono text-[11px] text-[#94A3B8] truncate">kaushik@analytics ~ %</span>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  id="termCopyBtn"
+                  type="button"
+                  title="Copy active query"
+                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-obsidian border border-borderHair font-mono text-[10px] text-[#CBD5E1] hover:text-amberBright hover:border-amberTerm/60 transition active:scale-95"
+                >
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                  </svg>
+                  <span>Copy</span>
+                </button>
+                <span class="inline-flex items-center gap-1.5 font-mono text-[10px] font-bold px-2 py-1 rounded-md bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emeraldBright animate-pulse"></span>
+                  LIVE
+                </span>
+              </div>
+            </div>
+
+            <!-- 3 Clickable Terminal File Tabs -->
+            <div class="px-3 pt-2 bg-obsidian/70 border-b border-borderHair flex items-center gap-1.5 overflow-x-auto" role="tablist">
+              <button
+                type="button"
+                data-term-tab="amazon"
+                class="term-tab-btn px-3 py-2 rounded-t-lg font-mono text-[11px] font-semibold transition-all whitespace-nowrap border-b-2 bg-obsidian text-amberBright border-amberBright"
+              >
+                amazon_kpi.sql
+              </button>
+              <button
+                type="button"
+                data-term-tab="meta"
+                class="term-tab-btn px-3 py-2 rounded-t-lg font-mono text-[11px] font-semibold transition-all whitespace-nowrap border-b-2 text-[#94A3B8] border-transparent hover:text-[#F8FAFC]"
+              >
+                meta_users.sql
+              </button>
+              <button
+                type="button"
+                data-term-tab="zomato"
+                class="term-tab-btn px-3 py-2 rounded-t-lg font-mono text-[11px] font-semibold transition-all whitespace-nowrap border-b-2 text-[#94A3B8] border-transparent hover:text-[#F8FAFC]"
+              >
+                zomato_lift.xlsx
+              </button>
+            </div>
+
+            <!-- Syntax-Highlighted Query Body -->
+            <div class="p-4 sm:p-5 bg-obsidian min-h-[158px] flex flex-col justify-center">
+              <pre id="terminalCode" class="font-mono text-[11px] sm:text-xs leading-relaxed text-[#F8FAFC] overflow-x-auto"></pre>
+            </div>
+
+            <!-- OUTPUT Metric Readout Strip + Open Full Dashboard CTA -->
+            <div class="px-4 sm:px-5 py-3.5 bg-surfaceElev border-t border-borderHair space-y-3">
+              <div class="flex items-center justify-between gap-2 font-mono text-[10px] uppercase tracking-wider">
+                <span class="text-emeraldBright font-bold">OUTPUT</span>
+                <span id="terminalExecTime" class="text-[#94A3B8]">0.038s · 113K rows</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-lg px-3 py-2 bg-obsidian border border-borderHair">
+                  <span id="termMetric1Label" class="font-mono text-[10px] text-[#94A3B8] block">Total Revenue</span>
+                  <span id="termMetric1Val" class="font-mono text-xs sm:text-sm font-extrabold text-amberBright mt-0.5 block">107.2M Revenue</span>
+                </div>
+                <div class="rounded-lg px-3 py-2 bg-obsidian border border-borderHair">
+                  <span id="termMetric2Label" class="font-mono text-[10px] text-[#94A3B8] block">2020 Surge</span>
+                  <span id="termMetric2Val" class="font-mono text-xs sm:text-sm font-extrabold text-emeraldBright mt-0.5 block">+43% YoY Growth</span>
+                </div>
+              </div>
+
+              <button
+                id="termOpenDashboardBtn"
+                type="button"
+                class="w-full py-2.5 px-4 rounded-xl bg-obsidian border border-amberTerm/45 hover:bg-amberTerm hover:text-obsidian font-mono text-xs font-bold text-amberBright transition-all flex items-center justify-center gap-2 active:scale-[0.99]"
+              >
+                <span>Open Full Dashboard</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. SECTION 01: FLAGSHIP PROJECTS (#projects)                          -->
+    <!-- ===================================================================== -->
+    <section id="projects" class="py-20 sm:py-24 border-t border-borderHair scroll-mt-16">
+      <!-- Full-Width Stacked Section Header (Strictly Outside & Above Grid) -->
+      <div class="section-heading-block">
+        <span class="font-mono text-xs uppercase tracking-widest text-amberBright block">
+          01 // CASE STUDIES
+        </span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Flagship Analytics Projects
+        </h2>
+        <p class="mt-2.5 text-sm sm:text-base text-[#94A3B8] max-w-2xl">
+          Interactive Power BI, SQL, and Excel dashboards built for executive decision-making.
+        </p>
+      </div>
+
+      <!-- Clean 3-Column Project Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Project 01: Amazon E-Commerce -->
+        <article class="term-card rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-mono text-xs font-bold text-[#94A3B8]">01</span>
+              <span class="font-mono text-[11px] font-semibold px-2.5 py-1 rounded-md bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">
+                107.2M Revenue
+              </span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-[#F8FAFC] leading-snug">
+                Amazon E-Commerce Sales &amp; Returns
+              </h3>
+              <p class="text-sm text-[#CBD5E1] leading-relaxed">
+                113K+ orders analyzed across Power BI &amp; SQL uncovering a +43% 2020 YoY spike and 27.0% return rate vs 30.9% abroad.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-[#CBD5E1]">
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">Power BI</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">DAX</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">SQL</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-borderHair flex items-center gap-2.5">
+            <button
+              type="button"
+              data-open-modal="amazon"
+              class="open-project-btn flex-1 min-w-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-mono text-xs font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition-all active:scale-95 whitespace-nowrap"
+            >
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+                <rect x="7" y="12" width="3" height="6" fill="currentColor" stroke="none" />
+                <rect x="12" y="8" width="3" height="10" fill="currentColor" stroke="none" />
+                <rect x="17" y="5" width="3" height="13" fill="currentColor" stroke="none" />
+              </svg>
+              <span>Explore Dashboard</span>
+            </button>
+
+            <a
+              href="https://github.com/kaushik4200"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="repo-btn repo-link rounded-lg px-3.5 py-2.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              <span>Repo</span>
+              <svg class="w-3 h-3 opacity-80 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 02: Meta Instagram -->
+        <article class="term-card rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-mono text-xs font-bold text-[#94A3B8]">02</span>
+              <span class="font-mono text-[11px] font-semibold px-2.5 py-1 rounded-md bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">
+                7-Table Schema
+              </span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-[#F8FAFC] leading-snug">
+                Meta Instagram Engagement &amp; Retention
+              </h3>
+              <p class="text-sm text-[#CBD5E1] leading-relaxed">
+                Relational SQL audit surfacing a 77% high-activity user tier, DENSE_RANK creator leaderboard, and chained CTE hashtag analytics.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-[#CBD5E1]">
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">CTEs</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">Window Functions</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-borderHair flex items-center gap-2.5">
+            <button
+              type="button"
+              data-open-modal="meta"
+              class="open-project-btn flex-1 min-w-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-mono text-xs font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition-all active:scale-95 whitespace-nowrap"
+            >
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+                <rect x="7" y="12" width="3" height="6" fill="currentColor" stroke="none" />
+                <rect x="12" y="8" width="3" height="10" fill="currentColor" stroke="none" />
+                <rect x="17" y="5" width="3" height="13" fill="currentColor" stroke="none" />
+              </svg>
+              <span>Explore Dashboard</span>
+            </button>
+
+            <a
+              href="https://github.com/kaushik4200/SQL_Meta_Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="repo-btn repo-link rounded-lg px-3.5 py-2.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              <span>Repo</span>
+              <svg class="w-3 h-3 opacity-80 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 03: Zomato Global Expansion -->
+        <article class="term-card rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-mono text-xs font-bold text-[#94A3B8]">03</span>
+              <span class="font-mono text-[11px] font-semibold px-2.5 py-1 rounded-md bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">
+                9,551 Listings
+              </span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-[#F8FAFC] leading-snug">
+                Zomato Global Market Expansion
+              </h3>
+              <p class="text-sm text-[#CBD5E1] leading-relaxed">
+                15-country expansion analysis identifying Top 5 underserved markets and a +0.67★ Table Booking rating lift.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-[#CBD5E1]">
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">Advanced Excel</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">PivotTables</span>
+              <span class="px-2.5 py-1 rounded-md bg-obsidian border border-borderHair">Power Query</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-borderHair flex items-center gap-2.5">
+            <button
+              type="button"
+              data-open-modal="zomato"
+              class="open-project-btn flex-1 min-w-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-mono text-xs font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition-all active:scale-95 whitespace-nowrap"
+            >
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+                <rect x="7" y="12" width="3" height="6" fill="currentColor" stroke="none" />
+                <rect x="12" y="8" width="3" height="10" fill="currentColor" stroke="none" />
+                <rect x="17" y="5" width="3" height="13" fill="currentColor" stroke="none" />
+              </svg>
+              <span>Explore Dashboard</span>
+            </button>
+
+            <a
+              href="https://github.com/kaushik4200/Excel_Zomato_Analysis"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="repo-btn repo-link rounded-lg px-3.5 py-2.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              <span>Repo</span>
+              <svg class="w-3 h-3 opacity-80 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. SECTION 02: TECHNICAL ABILITIES (#skills) — GLOWING CARDS          -->
+    <!-- ===================================================================== -->
+    <section id="skills" class="py-20 sm:py-24 border-t border-borderHair scroll-mt-16">
+      <!-- Full-Width Stacked Section Header (Strictly Outside & Above Grid) -->
+      <div class="section-heading-block">
+        <span class="font-mono text-xs uppercase tracking-widest text-amberBright block">
+          02 // CAPABILITIES
+        </span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Technical Abilities
+        </h2>
+        <p class="mt-2.5 text-sm sm:text-base text-[#94A3B8] max-w-2xl">
+          Analytics, data modeling, and structured delivery skills built for high-impact reporting teams.
+        </p>
+      </div>
+
+      <!-- 3 Mouse-Tracking Radial-Glow Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 (Amber Glow): BI & Spreadsheets -->
+        <div class="glow-box glow-box-amber rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="w-11 h-11 rounded-xl bg-amberTerm/15 border border-amberTerm/40 flex items-center justify-center text-amberBright">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+                  <rect x="7" y="12" width="3" height="6" rx="0.5" fill="currentColor" stroke="none" />
+                  <rect x="12" y="8" width="3" height="10" rx="0.5" fill="currentColor" stroke="none" />
+                  <rect x="17" y="5" width="3" height="13" rx="0.5" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span class="font-mono text-[10px] uppercase tracking-widest text-amberBright/90">BI &amp; Reporting</span>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">BI &amp; Spreadsheets</h3>
+              <p class="text-xs text-[#94A3B8] mt-1 leading-relaxed">
+                Executive KPI dashboards, automated Power Query transforms, and dynamic spreadsheet modeling.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Power BI (DAX, Power Query, KPI Dashboards)</span>
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Advanced Excel (PivotTables, XLOOKUP, INDEX/MATCH)</span>
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Power Query &amp; Array Formulas</span>
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Conditional Formatting &amp; Executive Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Emerald Glow): SQL & Data Modeling -->
+        <div class="glow-box glow-box-emerald rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="w-11 h-11 rounded-xl bg-emeraldTerm/15 border border-emeraldTerm/40 flex items-center justify-center text-emeraldBright">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+                  <path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
+                </svg>
+              </span>
+              <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldBright/90">Query Engine</span>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">SQL &amp; Data Modeling</h3>
+              <p class="text-xs text-[#94A3B8] mt-1 leading-relaxed">
+                Relational schema audits, chained CTEs, analytical window functions, and clean data architecture.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">SQL (PostgreSQL, MySQL)</span>
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">Window Functions (DENSE_RANK, ROW_NUMBER)</span>
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">Chained CTEs &amp; Subqueries</span>
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">Relational Schema &amp; Data Integrity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Dual Amber-Emerald Glow): Python, SDLC & Cloud -->
+        <div class="glow-box glow-box-dual rounded-2xl p-6 flex flex-col justify-between gap-6">
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="w-11 h-11 rounded-xl bg-obsidian border border-amberTerm/40 flex items-center justify-center text-amberBright">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 17l6-5-6-5M12 19h8" />
+                </svg>
+              </span>
+              <span class="font-mono text-[10px] uppercase tracking-widest text-emeraldBright/90">Code &amp; Delivery</span>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-[#F8FAFC]">Python, SDLC &amp; Cloud</h3>
+              <p class="text-xs text-[#94A3B8] mt-1 leading-relaxed">
+                Programmatic EDA, structured delivery methodologies, version control, and certified cloud foundations.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Python (pandas, NumPy, EDA)</span>
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">SDLC: Agile, Waterfall &amp; Prototyping</span>
+              <span class="skill-pill skill-pill-amber px-2.5 py-1.5 rounded-lg">Git &amp; GitHub Version Control</span>
+              <span class="skill-pill skill-pill-emerald px-2.5 py-1.5 rounded-lg">Cloud Foundations (GCP · AWS · Oracle)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. SECTION 03: CAREER & EDUCATION TIMELINE (#timeline)                -->
+    <!-- ===================================================================== -->
+    <section id="timeline" class="py-20 sm:py-24 border-t border-borderHair scroll-mt-16">
+      <!-- Full-Width Stacked Section Header (Strictly Outside & Above Timeline) -->
+      <div class="section-heading-block">
+        <span class="font-mono text-xs uppercase tracking-widest text-amberBright block">
+          03 // BACKGROUND
+        </span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Career &amp; Education Timeline
+        </h2>
+      </div>
+
+      <!-- Vertical Glowing Amber-to-Emerald Timeline -->
+      <div class="relative pl-8 sm:pl-10 space-y-10 max-w-4xl">
+        <div class="timeline-spine absolute left-2.5 sm:left-3 top-2 bottom-2 w-0.5 rounded-full" aria-hidden="true"></div>
+
+        <!-- Milestone 1 (Amber): NxtWave -->
+        <article class="timeline-item relative">
+          <span
+            class="timeline-dot-amber absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-obsidian border-2 border-amberTerm flex items-center justify-center transition-all"
+            aria-hidden="true"
+          >
+            <span class="w-2 h-2 rounded-full bg-amberBright animate-pulse"></span>
+          </span>
+
+          <div class="term-card rounded-2xl p-6 sm:p-7 space-y-4">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <span class="font-mono text-xs text-amberBright">Oct – Dec 2025</span>
+                <h3 class="text-lg sm:text-xl font-bold text-[#F8FAFC] mt-1">
+                  Business Operations Associate Intern
+                </h3>
+                <p class="font-mono text-sm text-[#CBD5E1] mt-0.5">NxtWave</p>
+              </div>
+              <span class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">
+                ~60% Reporting Time Reduced
+              </span>
+            </div>
+
+            <ul class="space-y-2 text-sm text-[#CBD5E1] leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emeraldBright mt-2 shrink-0"></span>
+                <span>Built daily operational Excel dashboards, cutting manual reporting time by <strong class="text-emeraldBright font-mono">~60%</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amberBright mt-2 shrink-0"></span>
+                <span>Profiled candidates systematically and maintained accurate tracking pipelines across cohorts.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amberBright mt-2 shrink-0"></span>
+                <span>Coordinated academic and instructor workflows while enforcing cross-functional data integrity.</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Milestone 2 (Emerald): SRM University -->
+        <article class="timeline-item relative">
+          <span
+            class="timeline-dot-emerald absolute -left-8 sm:-left-10 top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-obsidian border-2 border-emeraldTerm flex items-center justify-center transition-all"
+            aria-hidden="true"
+          >
+            <span class="w-2 h-2 rounded-full bg-emeraldBright animate-pulse"></span>
+          </span>
+
+          <div class="term-card rounded-2xl p-6 sm:p-7 space-y-2.5">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <span class="font-mono text-xs text-emeraldBright">2021 – 2025</span>
+                <h3 class="text-lg sm:text-xl font-bold text-[#F8FAFC] mt-1">
+                  B.Tech in Computer Science &amp; Engineering (Cloud Computing)
+                </h3>
+                <p class="font-mono text-sm text-[#CBD5E1] mt-0.5">SRM University, Chennai</p>
+              </div>
+              <span class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-obsidian border border-borderHair text-[#F8FAFC]">
+                CGPA: 6.75
+              </span>
+            </div>
+            <p class="text-sm text-[#94A3B8] leading-relaxed">
+              Coursework in relational databases, cloud architecture, and software engineering.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Verified Cloud Certifications (3 Slim Inline Pills Beneath Timeline) -->
+      <div class="mt-12 pt-8 border-t border-borderHair/70 max-w-4xl">
+        <span class="font-mono text-[11px] uppercase tracking-widest text-[#94A3B8] block mb-4">
+          Verified Cloud Certifications
+        </span>
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Google Cloud -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface border border-borderHair hover:border-amberTerm/60 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12.2 6.2a4.8 4.8 0 014.4 2.9 3.6 3.6 0 01.6 7.1H7.1a4.2 4.2 0 01-.5-8.3A4.8 4.8 0 0112.2 6.2z" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="9" cy="12.5" r="1.2" fill="#FB7185" />
+              <circle cx="12" cy="10.4" r="1.2" fill="#FBBF24" />
+              <circle cx="15" cy="12.5" r="1.2" fill="#34D399" />
+            </svg>
+            <span class="text-xs text-[#F8FAFC] font-semibold">Google Cloud</span>
+            <span class="text-xs text-[#94A3B8]">— Big Data &amp; ML Fundamentals</span>
+          </div>
+
+          <!-- Oracle -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface border border-borderHair hover:border-coralAlert/60 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="10" rx="5" stroke="#FB7185" stroke-width="2.1" />
+              <line x1="8" y1="12" x2="16" y2="12" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+            <span class="text-xs text-[#F8FAFC] font-semibold">Oracle</span>
+            <span class="text-xs text-[#94A3B8]">— Cloud Foundations Associate</span>
+          </div>
+
+          <!-- AWS Academy -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface border border-borderHair hover:border-emeraldTerm/60 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6.5 13.5h11a3.2 3.2 0 00.5-6.35A4.6 4.6 0 009.1 5.9a3.6 3.6 0 00-2.6 7.6z" stroke="#CBD5E1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5 17.5c4.2 2.4 9.8 2.4 14 0" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span class="text-xs text-[#F8FAFC] font-semibold">AWS Academy</span>
+            <span class="text-xs text-[#94A3B8]">— Cloud Architecting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. SECTION 04: CONTACT (#contact) — STRICTLY Email, Phone & LinkedIn  -->
+    <!-- ===================================================================== -->
+    <section id="contact" class="py-20 sm:py-24 border-t border-borderHair scroll-mt-16">
+      <!-- Full-Width Stacked Section Header (Strictly Outside & Above Grid) -->
+      <div class="section-heading-block text-center">
+        <span class="font-mono text-xs uppercase tracking-widest text-amberBright block">
+          04 // CONNECT
+        </span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight">
+          Get In Touch
+        </h2>
+        <p class="mt-2.5 text-sm sm:text-base text-[#94A3B8] max-w-xl mx-auto">
+          Available for Data Analyst and Business Analyst roles across India.
+        </p>
+      </div>
+
+      <!-- Centered 3-Card Grid ONLY (No GitHub, No Resume) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <!-- 1. Email (One-Click Copy) -->
+        <button
+          id="copyEmailBtn"
+          type="button"
+          class="term-card rounded-2xl p-5 text-left flex flex-col justify-between gap-4 group"
+        >
+          <div class="flex items-center justify-between w-full">
+            <span class="w-9 h-9 rounded-lg bg-obsidian border border-borderHair group-hover:border-amberTerm/60 flex items-center justify-center text-amberBright transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline stroke-linecap="round" stroke-linejoin="round" points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <span id="emailCopyBadge" class="inline-flex items-center gap-1 font-mono text-[10px] text-[#94A3B8] group-hover:text-amberBright transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+              </svg>
+              <span>Copy</span>
+            </span>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block">Email</span>
+            <span class="font-mono text-xs text-[#F8FAFC] break-all mt-0.5 block">dharakaushik984@gmail.com</span>
+          </div>
+        </button>
+
+        <!-- 2. Phone (One-Click Copy) -->
+        <button
+          id="copyPhoneBtn"
+          type="button"
+          class="term-card rounded-2xl p-5 text-left flex flex-col justify-between gap-4 group"
+        >
+          <div class="flex items-center justify-between w-full">
+            <span class="w-9 h-9 rounded-lg bg-obsidian border border-borderHair group-hover:border-emeraldTerm/60 flex items-center justify-center text-emeraldBright transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </span>
+            <span id="phoneCopyBadge" class="inline-flex items-center gap-1 font-mono text-[10px] text-[#94A3B8] group-hover:text-emeraldBright transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+              </svg>
+              <span>Copy</span>
+            </span>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block">Phone</span>
+            <span class="font-mono text-xs text-[#F8FAFC] mt-0.5 block">+91 9948296595</span>
+          </div>
+        </button>
+
+        <!-- 3. LinkedIn (Opens in New Tab) -->
+        <a
+          href="https://linkedin.com/in/kaushik-dhara"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="term-card rounded-2xl p-5 text-left flex flex-col justify-between gap-4 group"
+        >
+          <div class="flex items-center justify-between w-full">
+            <span class="w-9 h-9 rounded-lg bg-obsidian border border-borderHair group-hover:border-amberTerm/60 flex items-center justify-center text-amberBright transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </span>
+            <svg class="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-amberBright transition-colors" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block">LinkedIn</span>
+            <span class="font-mono text-xs text-[#F8FAFC] mt-0.5 block">linkedin.com/in/kaushik-dhara</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Minimal Copyright Footer -->
+      <footer class="mt-20 pt-8 border-t border-borderHair text-center font-mono text-xs text-[#94A3B8]">
+        © 2026 Sai Kaushik Dhara · Built for Analytics &amp; Business Intelligence
+      </footer>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 7. INTERACTIVE 4-TAB PROJECT DASHBOARD MODAL                          -->
+  <!-- ===================================================================== -->
+  <div
+    id="projectModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-obsidian/85 backdrop-blur-md"
+  >
+    <div class="modal-pop relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl bg-surface border border-borderHair shadow-2xl flex flex-col">
+      <!-- Sticky Modal Header -->
+      <div class="sticky top-0 z-30 px-5 sm:px-7 py-4 bg-surfaceElev/95 backdrop-blur-md border-b border-borderHair flex items-start justify-between gap-4">
+        <div class="min-w-0">
+          <span id="modalSubtitle" class="font-mono text-[11px] uppercase tracking-wider text-amberBright block">
+            Interactive Dashboard
+          </span>
+          <h3 id="modalTitle" class="text-lg sm:text-xl font-extrabold text-[#F8FAFC] mt-0.5 truncate">
+            Project Case Study
+          </h3>
+        </div>
+
+        <div class="flex items-center gap-2.5 shrink-0">
+          <a
+            id="modalRepoLink"
+            href="https://github.com/kaushik4200"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="repo-btn rounded-lg px-3.5 py-2.5"
+          >
+            <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0.297C5.37 0.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+            <span class="hidden sm:inline">Repo</span>
+            <svg class="w-3 h-3 opacity-80 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </a>
+
+          <button
+            id="closeProjectModalBtn"
+            type="button"
+            aria-label="Close project modal"
+            class="p-2 rounded-lg bg-obsidian border border-borderHair text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-amberTerm/60 transition"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Modal Content -->
+      <div id="projectModalBody" class="p-5 sm:p-7 space-y-5"></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 8. FLOATING IN-PAGE GOOGLE DRIVE RESUME MODAL                         -->
+  <!-- ===================================================================== -->
+  <div
+    id="resumeModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="resumeModalTitle"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-obsidian/85 backdrop-blur-md"
+  >
+    <div class="modal-pop relative w-full max-w-4xl rounded-2xl bg-surface border border-borderHair shadow-2xl overflow-hidden flex flex-col">
+      <!-- Header -->
+      <div class="px-5 py-4 bg-surfaceElev border-b border-borderHair flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-obsidian border border-borderHair flex items-center justify-center text-amberBright">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline stroke-linecap="round" stroke-linejoin="round" points="14 2 14 8 20 8" />
+            </svg>
+          </span>
+          <div>
+            <h3 id="resumeModalTitle" class="text-sm sm:text-base font-bold text-[#F8FAFC]">
+              Sai Kaushik Dhara — Resume.pdf
+            </h3>
+            <p class="font-mono text-[10px] text-[#94A3B8]">In-Page Google Drive Preview</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a
+            id="resumeDownloadPrimary"
+            href="#"
+            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg font-mono text-xs font-bold bg-amberTerm text-obsidian hover:bg-amberBright transition active:scale-95"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline stroke-linecap="round" stroke-linejoin="round" points="7 10 12 15 17 10" />
+              <line stroke-linecap="round" stroke-linejoin="round" x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>Download PDF</span>
+          </a>
+
+          <button
+            id="closeResumeModalBtn"
+            type="button"
+            aria-label="Close resume modal"
+            class="p-2 rounded-lg bg-obsidian border border-borderHair text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-amberTerm/60 transition"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 78vh Lazy-Loaded Iframe + Fallback Notice -->
+      <div class="relative w-full h-[78vh] bg-obsidian">
+        <div id="resumeSpinner" class="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10 bg-obsidian">
+          <div class="w-8 h-8 rounded-full border-2 border-borderHair border-t-amberBright animate-spin"></div>
+          <span class="font-mono text-xs text-[#94A3B8]">Loading resume preview...</span>
+        </div>
+
+        <div id="resumeFallbackBox" class="hidden absolute inset-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-obsidian space-y-3">
+          <span class="font-mono text-xs uppercase tracking-widest text-amberBright">Resume ID Not Configured</span>
+          <p class="text-sm text-[#CBD5E1] max-w-md">
+            Paste your Google Drive PDF file ID into <code class="font-mono text-amberBright">RESUME_DRIVE_FILE_ID</code> at the top of the <code class="font-mono">&lt;script&gt;</code> tag in <code class="font-mono">index.html</code> to enable live preview and direct download.
+          </p>
+        </div>
+
+        <iframe
+          id="resumeIframe"
+          title="Sai Kaushik Dhara Resume Preview"
+          class="w-full h-full border-0 relative z-20"
+          allow="autoplay"
+        ></iframe>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-5 py-3 bg-surfaceElev border-t border-borderHair flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] text-[#94A3B8]">
+        <span>Press <strong class="text-[#F8FAFC]">ESC</strong> or click outside to close</span>
+        <a id="resumeDownloadFallback" href="#" class="text-emeraldBright hover:underline font-medium">
+          Direct PDF Download →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification (Zero alert() usage) -->
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-xl bg-surfaceElev border border-emeraldTerm/60 shadow-2xl"
+  >
+    <svg class="w-4 h-4 text-emeraldBright shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true">
+      <polyline stroke-linecap="round" stroke-linejoin="round" points="20 6 9 17 4 12" />
+    </svg>
+    <span id="toastText" class="font-mono text-xs font-medium text-[#F8FAFC]">Copied!</span>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SELF-CONTAINED VANILLA JAVASCRIPT                                     -->
+  <!-- ===================================================================== -->
+  <script>
+    /* =====================================================================
+       RESUME CONFIGURATION — Replace with any Google Drive PDF File ID
+       (From link: https://drive.google.com/file/d/<FILE_ID>/view)
+       ===================================================================== */
+    const RESUME_DRIVE_FILE_ID = "1KjBLyc85VcrbR7-yyDB7vzxlFPE6zBbP";
+    const RESUME_PREVIEW_URL = `https://drive.google.com/file/d/${RESUME_DRIVE_FILE_ID}/preview`;
+    const RESUME_DOWNLOAD_URL = `https://drive.google.com/uc?export=download&id=${RESUME_DRIVE_FILE_ID}`;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      'use strict';
+
+      /* -------------------------------------------------------------------
+         1. WIRE RESUME DOWNLOAD LINKS
+         ------------------------------------------------------------------- */
+      const isResumeConfigured =
+        RESUME_DRIVE_FILE_ID &&
+        RESUME_DRIVE_FILE_ID.trim() !== '' &&
+        RESUME_DRIVE_FILE_ID.indexOf('YOUR_GOOGLE_DRIVE') === -1;
+
+      const resumeDownloadPrimary = document.getElementById('resumeDownloadPrimary');
+      const resumeDownloadFallback = document.getElementById('resumeDownloadFallback');
+      if (isResumeConfigured) {
+        if (resumeDownloadPrimary) resumeDownloadPrimary.href = RESUME_DOWNLOAD_URL;
+        if (resumeDownloadFallback) resumeDownloadFallback.href = RESUME_DOWNLOAD_URL;
+      }
+
+      /* -------------------------------------------------------------------
+         2. UTILITIES: TOAST, IFRAME-SAFE CLIPBOARD & CODE HIGHLIGHTER
+         ------------------------------------------------------------------- */
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toastText');
+      let toastTimer = null;
+
+      function showToast(msg) {
+        if (!toast || !toastText) return;
+        toastText.textContent = msg;
+        toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 2300);
+      }
+
+      function copyText(text, label) {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          showToast(label ? label + ' copied!' : 'Copied!');
+        } catch (err) {
+          showToast('Copy failed — please select manually.');
+        }
+      }
+
+      function highlightCode(raw) {
+        const safe = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return safe
+          .replace(/(--[^\n]*)/g, '<span class="text-[#94A3B8] italic">$1</span>')
+          .replace(
+            /\b(SELECT|FROM|WHERE|JOIN|LEFT JOIN|ON|GROUP BY|ORDER BY|HAVING|WITH|AS|AND|OR|DESC|ASC|LIMIT|CASE|WHEN|THEN|ELSE|END|OVER|PARTITION BY|VAR|RETURN|NOT|EXISTS)\b/g,
+            '<span class="text-amberBright font-semibold">$1</span>'
+          )
+          .replace(
+            /\b(SUMX|CALCULATE|SAMEPERIODLASTYEAR|DIVIDE|COUNT|SUM|AVG|ROUND|LAG|PERCENT_RANK|DENSE_RANK|ROW_NUMBER|DATE_TRUNC|NULLIF|DISTINCT|AVERAGEIFS|XLOOKUP)\b/g,
+            '<span class="text-emeraldBright font-semibold">$1</span>'
+          );
+      }
+
+      /* -------------------------------------------------------------------
+         3. MOBILE DRAWER & REPO LINK SAFETY
+         ------------------------------------------------------------------- */
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function () {
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      document.querySelectorAll('.repo-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      });
+
+      /* -------------------------------------------------------------------
+         4. MOUSE-TRACKING RADIAL SPOTLIGHT ON TECHNICAL ABILITIES CARDS
+         ------------------------------------------------------------------- */
+      document.querySelectorAll('.glow-box').forEach(function (box) {
+        box.addEventListener('mousemove', function (e) {
+          const rect = box.getBoundingClientRect();
+          box.style.setProperty('--mouse-x', (e.clientX - rect.left).toFixed(1) + 'px');
+          box.style.setProperty('--mouse-y', (e.clientY - rect.top).toFixed(1) + 'px');
+        });
+      });
+
+      /* -------------------------------------------------------------------
+         5. HERO LIVE QUERY TERMINAL
+         ------------------------------------------------------------------- */
+      const TERMINAL_TABS = {
+        amazon: {
+          modalId: 'amazon',
+          exec: '0.038s · 113K+ orders',
+          code:
+            'SELECT DATE_TRUNC(\'year\', order_date) AS yr,\n' +
+            '  ROUND(SUM(qty * unit_price) / 1e6, 1) AS rev_m,\n' +
+            '  ROUND(100.0 * AVG(is_returned), 1) AS ret_pct\n' +
+            'FROM amazon_orders GROUP BY 1 ORDER BY 1;',
+          m1Label: 'Total Revenue',
+          m1Val: '107.2M Revenue',
+          m2Label: '2020 Surge',
+          m2Val: '+43% YoY Growth',
+        },
+        meta: {
+          modalId: 'meta',
+          exec: '0.024s · 7-table schema',
+          code:
+            'SELECT u.username, COUNT(l.photo_id) AS likes,\n' +
+            '  DENSE_RANK() OVER (\n' +
+            '    ORDER BY COUNT(l.photo_id) DESC\n' +
+            '  ) AS creator_rank\n' +
+            'FROM users u JOIN likes l ON u.id = l.user_id;',
+          m1Label: 'High-Activity Tier',
+          m1Val: '77% Active Users',
+          m2Label: 'Relational Schema',
+          m2Val: '7 Tables Joined',
+        },
+        zomato: {
+          modalId: 'zomato',
+          exec: 'Pivot · 9,551 rows · 15 countries',
+          code:
+            '-- Excel Rating Lift & Global Expansion Model\n' +
+            '=AVERAGEIFS(Rating, Has_Table_Booking, "Yes")\n' +
+            ' - AVERAGEIFS(Rating, Has_Table_Booking, "No")\n' +
+            '-- Top 5 Markets: Indonesia, Qatar, Sri Lanka, Singapore, Canada',
+          m1Label: 'Table Booking Lift',
+          m1Val: '+0.67★ Rating Lift',
+          m2Label: 'Top 5 Markets',
+          m2Val: 'Indonesia, Qatar, Sri Lanka, Singapore, Canada',
+        },
+      };
+
+      let activeTermKey = 'amazon';
+
+      const terminalCodeEl = document.getElementById('terminalCode');
+      const terminalExecTimeEl = document.getElementById('terminalExecTime');
+      const termMetric1Label = document.getElementById('termMetric1Label');
+      const termMetric1Val = document.getElementById('termMetric1Val');
+      const termMetric2Label = document.getElementById('termMetric2Label');
+      const termMetric2Val = document.getElementById('termMetric2Val');
+      const termCopyBtn = document.getElementById('termCopyBtn');
+      const termOpenDashboardBtn = document.getElementById('termOpenDashboardBtn');
+
+      function renderTerminal(key) {
+        const t = TERMINAL_TABS[key];
+        if (!t) return;
+        activeTermKey = key;
+
+        if (terminalCodeEl) {
+          terminalCodeEl.innerHTML =
+            '<code>' + highlightCode(t.code) + '<span class="term-cursor" aria-hidden="true"></span></code>';
+        }
+        if (terminalExecTimeEl) terminalExecTimeEl.textContent = t.exec;
+        if (termMetric1Label) termMetric1Label.textContent = t.m1Label;
+        if (termMetric1Val) termMetric1Val.textContent = t.m1Val;
+        if (termMetric2Label) termMetric2Label.textContent = t.m2Label;
+        if (termMetric2Val) termMetric2Val.textContent = t.m2Val;
+
+        document.querySelectorAll('.term-tab-btn').forEach(function (btn) {
+          const isAct = btn.getAttribute('data-term-tab') === key;
+          btn.classList.toggle('bg-obsidian', isAct);
+          btn.classList.toggle('text-amberBright', isAct);
+          btn.classList.toggle('border-amberBright', isAct);
+          btn.classList.toggle('text-[#94A3B8]', !isAct);
+          btn.classList.toggle('border-transparent', !isAct);
+        });
+
+        document.querySelectorAll('.stat-chip').forEach(function (chip) {
+          chip.classList.toggle('is-active', chip.getAttribute('data-term-chip') === key);
+        });
+      }
+
+      document.querySelectorAll('.term-tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          renderTerminal(btn.getAttribute('data-term-tab'));
+        });
+      });
+
+      document.querySelectorAll('.stat-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          renderTerminal(chip.getAttribute('data-term-chip'));
+        });
+      });
+
+      if (termCopyBtn) {
+        termCopyBtn.addEventListener('click', function () {
+          const t = TERMINAL_TABS[activeTermKey];
+          if (t) copyText(t.code, 'Query');
+        });
+      }
+
+      if (termOpenDashboardBtn) {
+        termOpenDashboardBtn.addEventListener('click', function () {
+          const t = TERMINAL_TABS[activeTermKey];
+          if (t) openProjectModal(t.modalId);
+        });
+      }
+
+      renderTerminal('amazon');
+
+      /* -------------------------------------------------------------------
+         6. PROJECT DASHBOARD DATASETS
+         ------------------------------------------------------------------- */
+      const PROJECTS = {
+        amazon: {
+          title: 'Amazon E-Commerce Sales & Returns',
+          subtitle: 'Power BI · DAX · SQL (113,000+ Orders · 2017–2020)',
+          repo: 'https://github.com/kaushik4200',
+          kpis: [
+            { label: 'Total Revenue', val: '107.2M', cls: 'text-amberBright' },
+            { label: 'Total Orders', val: '113K+', cls: 'text-[#F8FAFC]' },
+            { label: '2020 Surge', val: '+43.0% YoY', cls: 'text-emeraldBright' },
+            { label: 'Overall Returns', val: '27.0%', cls: 'text-[#F8FAFC]' },
+            { label: 'Abroad Returns', val: '30.9%', cls: 'text-coralAlert' },
+          ],
+          tabs: [
+            { id: 'rev', label: 'Revenue & Growth' },
+            { id: 'ret', label: 'Return Rate Audit' },
+            { id: 'score', label: '50/30/20 Customer Scoring' },
+            { id: 'code', label: 'DAX & SQL Logic' },
+          ],
+          annualRev: [
+            { year: '2017', rev: 18.4, yoy: 'Base Year', note: 'Baseline catalog expansion and initial fulfillment footprint across domestic zones.' },
+            { year: '2018', rev: 22.2, yoy: '+20.7% YoY', note: 'Steady marketplace adoption with improved repeat purchase frequency.' },
+            { year: '2019', rev: 27.4, yoy: '+23.4% YoY', note: 'Strong pre-pandemic growth led by high-ticket electronics and home goods.' },
+            { year: '2020', rev: 39.2, yoy: '+43.0% YoY', note: 'Peak e-commerce demand surge (+43% YoY), driving 36.6% of cumulative 4-year revenue.' },
+          ],
+          returns: [
+            {
+              label: 'Shipped from Abroad',
+              pct: 30.9,
+              gap: '+3.9pp vs Avg',
+              color: '#FB7185',
+              rowCls: 'interactive-row-coral',
+              rec: 'Highest return risk—prioritize pre-dispatch QC checks, transit packaging reinforcement, and clearer sizing/spec metadata.',
+            },
+            {
+              label: 'Third-Party Marketplace',
+              pct: 28.4,
+              gap: '+1.4pp vs Avg',
+              color: '#FBBF24',
+              rowCls: '',
+              rec: 'Enforce seller defect SLAs and automated listing accuracy audits on high-return SKUs.',
+            },
+            {
+              label: 'Overall Platform Avg',
+              pct: 27.0,
+              gap: 'Benchmark',
+              color: '#F8FAFC',
+              rowCls: '',
+              rec: 'Platform-wide return benchmark across 113,000+ orders after remediating 83K+ blank return reasons.',
+            },
+            {
+              label: 'Domestic Fulfilled (FBA)',
+              pct: 23.6,
+              gap: '-3.4pp vs Avg',
+              color: '#34D399',
+              rowCls: 'interactive-row-emerald',
+              rec: 'Best-performing fulfillment channel—use domestic FBA packaging and delivery SLAs as the cross-border target.',
+            },
+          ],
+          weights: [
+            {
+              label: 'Total Spend',
+              pct: 50,
+              color: '#FBBF24',
+              desc: 'Weighted heaviest (50%) to anchor customer lifetime value and prioritize high-revenue retention.',
+            },
+            {
+              label: 'Order Frequency',
+              pct: 30,
+              color: '#34D399',
+              desc: 'Captures habit-forming repeat buyers (30%) to distinguish loyal shoppers from one-off large orders.',
+            },
+            {
+              label: 'Retention / Quality',
+              pct: 20,
+              color: '#F8FAFC',
+              desc: 'Penalizes serial returners (20%) to protect net margin and highlight profitable customer cohorts.',
+            },
+          ],
+          tiers: [
+            {
+              tier: 'Platinum',
+              rule: 'Score ≥ 80',
+              profile: 'Top 15% high-spend, repeat buyers with <15% return rate.',
+              action: 'Action: VIP priority shipping & early access promos.',
+              badgeCls: 'bg-emeraldTerm/15 text-emeraldBright border-emeraldTerm/35',
+              rowCls: 'interactive-row-emerald',
+            },
+            {
+              tier: 'Gold',
+              rule: 'Score 55–79',
+              profile: 'Consistent mid-tier repeat shoppers with healthy basket size.',
+              action: 'Action: Bundle cross-sell & loyalty point nudges.',
+              badgeCls: 'bg-amberTerm/15 text-amberBright border-amberTerm/35',
+              rowCls: '',
+            },
+            {
+              tier: 'QC Watch',
+              rule: 'Score < 55',
+              profile: 'High return propensity or abroad-fulfillment friction cohort.',
+              action: 'Action: Trigger sizing guides & post-delivery QC survey.',
+              badgeCls: 'bg-coralAlert/15 text-coralAlert border-coralAlert/35',
+              rowCls: 'interactive-row-coral',
+            },
+          ],
+          snippets: {
+            dax: {
+              file: 'amazon_yoy_measures.dax',
+              badge: 'Power BI DAX',
+              code:
+                '-- YoY Revenue Growth % Measure\n' +
+                'Total Revenue = SUMX(Orders, Orders[Quantity] * Orders[UnitPrice])\n\n' +
+                'Prior Year Revenue =\n' +
+                'CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(DimDate[Date]))\n\n' +
+                'YoY Growth % =\n' +
+                'DIVIDE([Total Revenue] - [Prior Year Revenue], [Prior Year Revenue], 0)',
+            },
+            sql: {
+              file: 'customer_50_30_20_score.sql',
+              badge: 'PostgreSQL',
+              code:
+                '-- 50/30/20 Composite Customer Experience Score\n' +
+                'WITH customer_metrics AS (\n' +
+                '  SELECT customer_id,\n' +
+                '         SUM(qty * unit_price) AS total_spend,\n' +
+                '         COUNT(DISTINCT order_id) AS order_freq,\n' +
+                '         1.0 - AVG(is_returned) AS retention_score\n' +
+                '  FROM amazon_orders GROUP BY customer_id\n' +
+                ')\n' +
+                'SELECT customer_id,\n' +
+                '  ROUND((0.50 * PERCENT_RANK() OVER (ORDER BY total_spend)\n' +
+                '       + 0.30 * PERCENT_RANK() OVER (ORDER BY order_freq)\n' +
+                '       + 0.20 * retention_score) * 100, 1) AS cx_score\n' +
+                'FROM customer_metrics ORDER BY cx_score DESC;',
+            },
+          },
+        },
+        meta: {
+          title: 'Meta Instagram Engagement & Retention',
+          subtitle: 'PostgreSQL · 7-Table Relational Schema · CTEs & Window Functions',
+          repo: 'https://github.com/kaushik4200/SQL_Meta_Project',
+          kpis: [
+            { label: 'Schema Scope', val: '7 Tables', cls: 'text-[#F8FAFC]' },
+            { label: 'High-Activity Tier', val: '77%', cls: 'text-emeraldBright' },
+            { label: 'Low-Activity Tier', val: '23%', cls: 'text-coralAlert' },
+            { label: 'Avg Tags / Post', val: '2.64', cls: 'text-amberBright' },
+          ],
+          tabs: [
+            { id: 'creators', label: 'Top Creators' },
+            { id: 'hashtags', label: 'Hashtag Reach' },
+            { id: 'schema', label: 'Retention & 7-Table Schema' },
+            { id: 'sql', label: 'SQL Queries' },
+          ],
+          creators: [
+            { rank: 1, name: 'Eveline95', likes: 561, comments: 188, total: 749, dual: false },
+            { rank: 2, name: 'Janet.Armstrong', likes: 518, comments: 194, total: 712, dual: true },
+            { rank: 3, name: 'Zack_Kemmer93', likes: 496, comments: 185, total: 681, dual: true },
+            { rank: 4, name: 'Cesar93', likes: 472, comments: 171, total: 643, dual: false },
+            { rank: 5, name: 'Kenton_Kirlin', likes: 448, comments: 166, total: 614, dual: false },
+            { rank: 6, name: 'Malinda_Streich', likes: 421, comments: 158, total: 579, dual: false },
+          ],
+          hashtags: [
+            { tag: '#smile', posts: 59, eng: 1802, share: '19.8%', note: 'Top engagement driver across lifestyle posts—highest combined likes and comment velocity.' },
+            { tag: '#beach', posts: 42, eng: 1293, share: '14.2%', note: 'Strong seasonal travel tag with high visual save and like ratios.' },
+            { tag: '#party', posts: 39, eng: 1184, share: '13.0%', note: 'Drives multi-user comment threads and high peer tagging density.' },
+            { tag: '#fun', posts: 38, eng: 1126, share: '12.4%', note: 'Broad evergreen discovery tag performing reliably across creator cohorts.' },
+            { tag: '#concert', posts: 24, eng: 742, share: '8.2%', note: 'Event-driven spikes with strong engagement per post despite smaller volume.' },
+            { tag: '#food', posts: 24, eng: 718, share: '7.9%', note: 'Consistent daily discovery tag ideal for local brand partnerships.' },
+          ],
+          donut: [
+            {
+              label: 'High-Activity Tier',
+              pct: 77,
+              color: '#34D399',
+              desc: '77% of registered users actively post, like, or comment—forming the core retained community driving platform network effects.',
+            },
+            {
+              label: 'Moderate / Low Tier',
+              pct: 23,
+              color: '#FB7185',
+              desc: '23% have zero posts or minimal interactions—prime target for onboarding nudges, starter creator packs, and re-engagement campaigns.',
+            },
+          ],
+          tables: [
+            { name: 'users', pk: 'PK: id', cols: 'username, created_at', links: ['photos', 'comments', 'likes', 'follows'] },
+            { name: 'photos', pk: 'PK: id', cols: 'image_url, user_id', links: ['users', 'comments', 'likes', 'photo_tags'] },
+            { name: 'comments', pk: 'PK: id', cols: 'comment_text, user_id, photo_id', links: ['users', 'photos'] },
+            { name: 'likes', pk: 'PK: user_id, photo_id', cols: 'created_at', links: ['users', 'photos'] },
+            { name: 'follows', pk: 'PK: follower_id, followee_id', cols: 'created_at', links: ['users'] },
+            { name: 'tags', pk: 'PK: id', cols: 'tag_name', links: ['photo_tags'] },
+            { name: 'photo_tags', pk: 'PK: photo_id, tag_id', cols: 'junction table', links: ['photos', 'tags'] },
+          ],
+          snippets: {
+            rank: {
+              file: 'top_creators_dense_rank.sql',
+              badge: 'DENSE_RANK() Creator Query',
+              code:
+                '-- Rank Top Creators by Combined Likes + Comments\n' +
+                'WITH creator_eng AS (\n' +
+                '  SELECT u.id, u.username,\n' +
+                '         COUNT(DISTINCT l.user_id) AS total_likes,\n' +
+                '         COUNT(DISTINCT c.id) AS total_comments\n' +
+                '  FROM users u\n' +
+                '  JOIN photos p ON u.id = p.user_id\n' +
+                '  LEFT JOIN likes l ON p.id = l.photo_id\n' +
+                '  LEFT JOIN comments c ON p.id = c.photo_id\n' +
+                '  GROUP BY u.id, u.username\n' +
+                ')\n' +
+                'SELECT username, (total_likes + total_comments) AS total_eng,\n' +
+                '       DENSE_RANK() OVER (ORDER BY (total_likes + total_comments) DESC) AS rnk\n' +
+                'FROM creator_eng LIMIT 10;',
+            },
+            cte: {
+              file: 'hashtag_engagement_cte.sql',
+              badge: 'Chained CTE Hashtag Query',
+              code:
+                '-- Top Performing Hashtags by Total Engagement\n' +
+                'WITH tag_posts AS (\n' +
+                '  SELECT t.tag_name, pt.photo_id\n' +
+                '  FROM tags t JOIN photo_tags pt ON t.id = pt.tag_id\n' +
+                '),\n' +
+                'post_eng AS (\n' +
+                '  SELECT tp.tag_name, COUNT(DISTINCT tp.photo_id) AS posts,\n' +
+                '         COUNT(DISTINCT l.user_id) + COUNT(DISTINCT c.id) AS eng\n' +
+                '  FROM tag_posts tp\n' +
+                '  LEFT JOIN likes l ON tp.photo_id = l.photo_id\n' +
+                '  LEFT JOIN comments c ON tp.photo_id = c.photo_id\n' +
+                '  GROUP BY tp.tag_name\n' +
+                ')\n' +
+                'SELECT tag_name, posts, eng FROM post_eng ORDER BY eng DESC LIMIT 6;',
+            },
+            exists: {
+              file: 'engagement_bot_exists_audit.sql',
+              badge: 'EXISTS Bot / Engagement Audit',
+              code:
+                '-- Audit Inactive Users & Bot-Like Patterns with EXISTS\n' +
+                'SELECT u.id, u.username, u.created_at\n' +
+                'FROM users u\n' +
+                'WHERE NOT EXISTS (\n' +
+                '  SELECT 1 FROM photos p WHERE p.user_id = u.id\n' +
+                ')\n' +
+                'AND EXISTS (\n' +
+                '  SELECT 1 FROM likes l WHERE l.user_id = u.id\n' +
+                ')\n' +
+                'ORDER BY u.created_at ASC;',
+            },
+          },
+        },
+        zomato: {
+          title: 'Zomato Global Market Expansion',
+          subtitle: 'Advanced Excel · PivotTables · Power Query (9,551 Listings · 15 Countries)',
+          repo: 'https://github.com/kaushik4200/Excel_Zomato_Analysis',
+          kpis: [
+            { label: 'Listings', val: '9,551', cls: 'text-[#F8FAFC]' },
+            { label: 'Countries', val: '15 Countries', cls: 'text-[#F8FAFC]' },
+            { label: 'Booking Lift', val: '+0.67★', cls: 'text-emeraldBright' },
+            { label: 'Delivery Lift', val: '+0.54★', cls: 'text-amberBright' },
+          ],
+          tabs: [
+            { id: 'targets', label: 'Top 5 Expansion Countries' },
+            { id: 'lift', label: 'Feature Lift & Price Tiers' },
+            { id: 'cuisines', label: 'Top Cuisines' },
+            { id: 'trend', label: 'Openings Trend (2010–2018)' },
+          ],
+          targets: [
+            {
+              country: 'Indonesia',
+              rating: 4.30,
+              listings: 21,
+              tag: 'Top Priority',
+              tagCls: 'bg-emeraldTerm/15 text-emeraldBright border-emeraldTerm/35',
+              barColor: '#34D399',
+              note: 'Highest quality benchmark among low-competition markets with strong customer engagement and prime room for premium positioning.',
+            },
+            {
+              country: 'Qatar',
+              rating: 4.06,
+              listings: 20,
+              tag: 'High Margin',
+              tagCls: 'bg-amberTerm/15 text-amberBright border-amberTerm/35',
+              barColor: '#34D399',
+              note: 'Strong average ratings and affluent dining demand with minimal competitive saturation compared to mature markets.',
+            },
+            {
+              country: 'Sri Lanka',
+              rating: 3.87,
+              listings: 20,
+              tag: 'Regional Growth',
+              tagCls: 'bg-emeraldTerm/15 text-emeraldBright border-emeraldTerm/35',
+              barColor: '#FBBF24',
+              note: 'Underserved South Asian market offering high engagement potential and low entry barriers relative to India (8,652 listings).',
+            },
+            {
+              country: 'Singapore',
+              rating: 3.58,
+              listings: 20,
+              tag: 'Low Density',
+              tagCls: 'bg-amberTerm/15 text-amberBright border-amberTerm/35',
+              barColor: '#FBBF24',
+              note: 'High-spending urban dining hub with surprisingly low platform listing density, ideal for curated partner onboarding.',
+            },
+            {
+              country: 'Canada',
+              rating: 3.58,
+              listings: 4,
+              tag: 'Whitespace',
+              tagCls: 'bg-emeraldTerm/15 text-emeraldBright border-emeraldTerm/35',
+              barColor: '#34D399',
+              note: 'Ultra-low competition whitespace market (only 4 listings) presenting an early-mover expansion opportunity.',
+            },
+          ],
+          features: [
+            { name: 'Table Booking Enabled', yes: 3.44, no: 2.77, lift: '+0.67★', color: '#34D399', rowCls: 'interactive-row-emerald', note: 'Enabling table booking drives a +0.67★ rating lift (3.44★ vs 2.77★)—the strongest quality signal.' },
+            { name: 'Online Delivery Enabled', yes: 3.25, no: 2.71, lift: '+0.54★', color: '#FBBF24', rowCls: '', note: 'Online delivery delivers a +0.54★ rating lift (3.25★ vs 2.71★), lifting convenience and repeat orders.' },
+          ],
+          priceTiers: [
+            { tier: 'Price Tier 1 (Budget)', rating: 2.99, share: '46.5%', color: '#F8FAFC', note: '46.5% of listings sit in Budget Tier 1 (2.99★ avg)—highest volume with widest quality spread.' },
+            { tier: 'Price Tier 2 (Mid-Range)', rating: 3.42, share: '32.6%', color: '#FBBF24', note: '32.6% sit in Mid-Range Tier 2 (3.42★ avg)—strong balance of order volume and diner satisfaction.' },
+            { tier: 'Price Tier 3 (Upscale)', rating: 3.68, share: '14.7%', color: '#34D399', note: '14.7% sit in Upscale Tier 3 (3.68★ avg)—high table-booking adoption and consistent service quality.' },
+            { tier: 'Price Tier 4 (Fine Dining)', rating: 3.82, share: '6.2%', color: '#FB7185', note: '6.2% sit in Fine Dining Tier 4 (3.82★ avg)—peak rating tier and highest average check size.' },
+          ],
+          cuisines: [
+            { name: 'North Indian', count: 3960, rating: 3.41 },
+            { name: 'Chinese', count: 2735, rating: 3.38 },
+            { name: 'Fast Food', count: 1986, rating: 3.32 },
+            { name: 'Cafe', count: 703, rating: 3.59 },
+            { name: 'Italian', count: 764, rating: 3.68 },
+            { name: 'Mughlai', count: 995, rating: 3.46 },
+          ],
+          trend: [
+            { year: 2010, count: 1080, yoy: 'Base Year' },
+            { year: 2011, count: 1098, yoy: '+1.7%' },
+            { year: 2012, count: 1022, yoy: '-6.9%' },
+            { year: 2013, count: 1061, yoy: '+3.8%' },
+            { year: 2014, count: 1051, yoy: '-0.9%' },
+            { year: 2015, count: 1024, yoy: '-2.6%' },
+            { year: 2016, count: 1027, yoy: '+0.3%' },
+            { year: 2017, count: 1086, yoy: '+5.7%' },
+            { year: 2018, count: 1102, yoy: '+1.5%' },
+          ],
+        },
+      };
+
+      /* -------------------------------------------------------------------
+         7. PROJECT MODAL CONTROLLER (ALWAYS RESETS TO TAB 1)
+         ------------------------------------------------------------------- */
+      const projectModal = document.getElementById('projectModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalSubtitle = document.getElementById('modalSubtitle');
+      const modalRepoLink = document.getElementById('modalRepoLink');
+      const projectModalBody = document.getElementById('projectModalBody');
+      const closeProjectModalBtn = document.getElementById('closeProjectModalBtn');
+
+      const state = {
+        modalId: null,
+        amazonTab: 'rev',
+        amazonCode: 'dax',
+        metaTab: 'creators',
+        metaSql: 'rank',
+        zomatoTab: 'targets',
+        zomatoSort: 'count',
+      };
+
+      function openProjectModal(id) {
+        const proj = PROJECTS[id];
+        if (!proj || !projectModal || !projectModalBody) return;
+        state.modalId = id;
+
+        if (id === 'amazon') state.amazonTab = 'rev';
+        if (id === 'meta') state.metaTab = 'creators';
+        if (id === 'zomato') state.zomatoTab = 'targets';
+
+        modalTitle.textContent = proj.title;
+        modalSubtitle.textContent = proj.subtitle;
+        modalRepoLink.href = proj.repo;
+
+        renderModalShell(id);
+        projectModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProjectModal() {
+        if (!projectModal) return;
+        projectModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      function renderModalShell(id) {
+        const proj = PROJECTS[id];
+        const activeTab = id === 'amazon' ? state.amazonTab : id === 'meta' ? state.metaTab : state.zomatoTab;
+        const kpiCols = proj.kpis.length === 5 ? 'lg:grid-cols-5' : 'lg:grid-cols-4';
+
+        const kpiHtml = proj.kpis
+          .map(function (k) {
+            return (
+              '<div class="rounded-xl p-3 bg-obsidian border border-borderHair">' +
+              '<span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block truncate">' +
+              k.label +
+              '</span>' +
+              '<p class="font-mono text-sm sm:text-base font-extrabold ' +
+              k.cls +
+              ' mt-1 truncate">' +
+              k.val +
+              '</p></div>'
+            );
+          })
+          .join('');
+
+        const tabsHtml = proj.tabs
+          .map(function (t) {
+            const isAct = t.id === activeTab;
+            return (
+              '<button type="button" data-mtab="' +
+              t.id +
+              '" class="modal-tab-btn px-3.5 py-2 rounded-lg font-mono text-xs font-bold transition-all ' +
+              (isAct
+                ? 'bg-amberTerm text-obsidian'
+                : 'bg-surface border border-borderHair text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-amberTerm/50') +
+              '">' +
+              t.label +
+              '</button>'
+            );
+          })
+          .join('');
+
+        projectModalBody.innerHTML =
+          '<div class="grid grid-cols-2 sm:grid-cols-3 ' +
+          kpiCols +
+          ' gap-2.5">' +
+          kpiHtml +
+          '</div>' +
+          '<div class="rounded-2xl bg-obsidian border border-borderHair p-4 sm:p-5 space-y-5">' +
+          '<div class="flex flex-wrap items-center justify-between gap-2 pb-3.5 border-b border-borderHair">' +
+          '<div class="flex flex-wrap gap-2" role="tablist">' +
+          tabsHtml +
+          '</div>' +
+          '<span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8]">Hover elements to inspect</span>' +
+          '</div>' +
+          '<div id="modalTabContent" class="min-h-[270px]"></div>' +
+          '</div>';
+
+        projectModalBody.querySelectorAll('.modal-tab-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const tabId = btn.getAttribute('data-mtab');
+            if (id === 'amazon') state.amazonTab = tabId;
+            if (id === 'meta') state.metaTab = tabId;
+            if (id === 'zomato') state.zomatoTab = tabId;
+            renderModalShell(id);
+          });
+        });
+
+        const container = document.getElementById('modalTabContent');
+        if (id === 'amazon') renderAmazonTab(container, state.amazonTab);
+        if (id === 'meta') renderMetaTab(container, state.metaTab);
+        if (id === 'zomato') renderZomatoTab(container, state.zomatoTab);
+      }
+
+      /* -------------------------------------------------------------------
+         MODAL 1: AMAZON E-COMMERCE
+         ------------------------------------------------------------------- */
+      function renderAmazonTab(el, tab) {
+        const d = PROJECTS.amazon;
+        if (tab === 'rev') {
+          const W = 560;
+          const H = 195;
+          const padL = 44;
+          const padR = 24;
+          const padT = 28;
+          const padB = 34;
+          const maxVal = 44;
+          const barW = 58;
+          const step = (W - padL - padR) / d.annualRev.length;
+
+          const pts = d.annualRev.map(function (item, i) {
+            const cx = padL + step * i + step / 2;
+            const h = (item.rev / maxVal) * (H - padT - padB);
+            const y = H - padB - h;
+            return { item: item, cx: cx, y: y, h: h };
+          });
+
+          const polyPts = pts
+            .map(function (p) {
+              return p.cx.toFixed(1) + ',' + p.y.toFixed(1);
+            })
+            .join(' ');
+
+          const barsSvg = pts
+            .map(function (p, i) {
+              const isPeak = p.item.year === '2020';
+              const fill = isPeak ? '#34D399' : '#FBBF24';
+              return (
+                '<g class="amz-rev-grp svg-bar-grp" data-ridx="' +
+                i +
+                '">' +
+                '<rect x="' +
+                (p.cx - barW / 2).toFixed(1) +
+                '" y="' +
+                p.y.toFixed(1) +
+                '" width="' +
+                barW +
+                '" height="' +
+                p.h.toFixed(1) +
+                '" rx="6" fill="' +
+                fill +
+                '" />' +
+                '<circle cx="' +
+                p.cx.toFixed(1) +
+                '" cy="' +
+                p.y.toFixed(1) +
+                '" r="4.5" fill="#090B0E" stroke="#F8FAFC" stroke-width="2" />' +
+                '<text x="' +
+                p.cx.toFixed(1) +
+                '" y="' +
+                (p.y - 10).toFixed(1) +
+                '" text-anchor="middle" fill="#F8FAFC" font-size="11.5" font-weight="700" font-family="JetBrains Mono, monospace">' +
+                p.item.rev.toFixed(1) +
+                'M</text>' +
+                '<text x="' +
+                p.cx.toFixed(1) +
+                '" y="' +
+                (H - 10) +
+                '" text-anchor="middle" fill="#CBD5E1" font-size="11" font-family="JetBrains Mono, monospace">' +
+                p.item.year +
+                '</text></g>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<div class="p-3.5 rounded-xl bg-surface border border-borderHair flex flex-wrap items-center justify-between gap-2">' +
+            '<p id="amzRevCallout" class="text-xs text-[#CBD5E1]"><strong class="text-emeraldBright font-mono">2020 (39.2M · +43.0% YoY):</strong> ' +
+            d.annualRev[3].note +
+            '</p>' +
+            '<span id="amzRevBadge" class="font-mono text-xs font-bold px-2.5 py-0.5 rounded bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35">+43.0% YoY</span>' +
+            '</div>' +
+            '<div class="rounded-xl bg-surface border border-borderHair p-4 overflow-x-auto">' +
+            '<svg viewBox="0 0 ' +
+            W +
+            ' ' +
+            H +
+            '" class="w-full h-auto min-w-[400px]" role="img" aria-label="Amazon Annual Revenue 2017 to 2020">' +
+            '<line x1="' +
+            padL +
+            '" y1="' +
+            (H - padB) +
+            '" x2="' +
+            (W - padR) +
+            '" y2="' +
+            (H - padB) +
+            '" stroke="#2B3647" />' +
+            '<polyline fill="none" stroke="#F8FAFC" stroke-width="1.8" stroke-dasharray="4 4" opacity="0.6" points="' +
+            polyPts +
+            '" />' +
+            barsSvg +
+            '</svg></div></div>';
+
+          el.querySelectorAll('.amz-rev-grp').forEach(function (g) {
+            const item = d.annualRev[Number(g.getAttribute('data-ridx'))];
+            g.addEventListener('mouseenter', function () {
+              document.getElementById('amzRevCallout').innerHTML =
+                '<strong class="text-amberBright font-mono">' +
+                item.year +
+                ' (' +
+                item.rev.toFixed(1) +
+                'M · ' +
+                item.yoy +
+                '):</strong> ' +
+                item.note;
+              document.getElementById('amzRevBadge').textContent = item.yoy;
+            });
+          });
+        } else if (tab === 'ret') {
+          const rowsHtml = d.returns
+            .map(function (r, idx) {
+              const w = (r.pct / 36) * 100;
+              return (
+                '<div data-retidx="' +
+                idx +
+                '" class="amz-ret-row interactive-row ' +
+                r.rowCls +
+                ' rounded-xl p-3.5 space-y-2 cursor-pointer">' +
+                '<div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">' +
+                '<span class="row-title text-[#CBD5E1]">' +
+                r.label +
+                '</span>' +
+                '<div class="flex items-center gap-2">' +
+                '<span class="text-[10px] px-2 py-0.5 rounded bg-surface border border-borderHair text-[#CBD5E1]">' +
+                r.gap +
+                '</span>' +
+                '<span class="font-extrabold text-sm" style="color:' +
+                r.color +
+                ';">' +
+                r.pct.toFixed(1) +
+                '%</span></div></div>' +
+                '<div class="h-2.5 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                w.toFixed(1) +
+                '%; background-color:' +
+                r.color +
+                ';"></div></div></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<div class="p-3.5 rounded-xl bg-surface border border-coralAlert/45 flex flex-col sm:flex-row sm:items-center justify-between gap-2">' +
+            '<div>' +
+            '<span id="amzRetTitle" class="font-mono text-xs font-bold text-coralAlert">Shipped from Abroad — 30.9% (+3.9pp vs Avg)</span>' +
+            '<p id="amzRetRec" class="text-xs text-[#CBD5E1] mt-0.5">' +
+            d.returns[0].rec +
+            '</p></div>' +
+            '<span id="amzRetPill" class="font-mono text-xs font-extrabold px-2.5 py-1 rounded bg-coralAlert/15 text-coralAlert border border-coralAlert/35 shrink-0 self-start sm:self-center">30.9%</span>' +
+            '</div>' +
+            '<div class="space-y-2.5">' +
+            rowsHtml +
+            '</div>' +
+            '<div class="p-3.5 rounded-xl bg-surface border border-borderHair font-mono text-xs text-[#CBD5E1]">' +
+            '<strong class="text-amberBright">Data Quality Audit Note:</strong> Remediated <strong class="text-[#F8FAFC]">83K+ blank return reasons</strong> in Power Query into structured root-cause categories prior to KPI aggregation.' +
+            '</div></div>';
+
+          el.querySelectorAll('.amz-ret-row').forEach(function (row) {
+            const r = d.returns[Number(row.getAttribute('data-retidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('amzRetTitle').textContent = r.label + ' — ' + r.pct.toFixed(1) + '% (' + r.gap + ')';
+              document.getElementById('amzRetTitle').style.color = r.color;
+              document.getElementById('amzRetRec').textContent = r.rec;
+              document.getElementById('amzRetPill').textContent = r.pct.toFixed(1) + '%';
+              document.getElementById('amzRetPill').style.color = r.color;
+            });
+          });
+        } else if (tab === 'score') {
+          const weightCardsHtml = d.weights
+            .map(function (w, i) {
+              return (
+                '<div data-widx="' +
+                i +
+                '" class="amz-weight-card interactive-row rounded-xl p-4 space-y-2 cursor-pointer">' +
+                '<div class="flex items-center justify-between font-mono text-xs">' +
+                '<span class="row-title text-[#CBD5E1]">' +
+                w.label +
+                '</span>' +
+                '<span class="font-extrabold text-sm" style="color:' +
+                w.color +
+                ';">' +
+                w.pct +
+                '%</span></div>' +
+                '<div class="h-2 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                w.pct +
+                '%; background-color:' +
+                w.color +
+                ';"></div></div></div>'
+              );
+            })
+            .join('');
+
+          const tierHtml = d.tiers
+            .map(function (t) {
+              return (
+                '<div class="interactive-row ' +
+                t.rowCls +
+                ' rounded-xl p-4 space-y-2">' +
+                '<div class="flex items-center justify-between gap-2">' +
+                '<span class="font-mono text-xs font-bold px-2.5 py-0.5 rounded border ' +
+                t.badgeCls +
+                '">' +
+                t.tier +
+                '</span>' +
+                '<span class="font-mono text-xs font-bold text-[#F8FAFC]">' +
+                t.rule +
+                '</span></div>' +
+                '<p class="row-title text-xs text-[#CBD5E1]">' +
+                t.profile +
+                '</p>' +
+                '<p class="font-mono text-[11px] text-[#94A3B8] pt-2 border-t border-borderHair">' +
+                t.action +
+                '</p></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<p id="amzWeightNote" class="p-3.5 rounded-xl bg-surface border border-borderHair text-xs text-[#CBD5E1]">' +
+            '<strong class="text-amberBright font-mono">50% Total Spend:</strong> ' +
+            d.weights[0].desc +
+            '</p>' +
+            '<div class="grid grid-cols-1 md:grid-cols-3 gap-3">' +
+            weightCardsHtml +
+            '</div>' +
+            '<div class="grid grid-cols-1 md:grid-cols-3 gap-3">' +
+            tierHtml +
+            '</div></div>';
+
+          el.querySelectorAll('.amz-weight-card').forEach(function (card) {
+            const w = d.weights[Number(card.getAttribute('data-widx'))];
+            card.addEventListener('mouseenter', function () {
+              document.getElementById('amzWeightNote').innerHTML =
+                '<strong class="font-mono" style="color:' +
+                w.color +
+                ';">' +
+                w.pct +
+                '% ' +
+                w.label +
+                ':</strong> ' +
+                w.desc;
+            });
+          });
+        } else if (tab === 'code') {
+          const isDax = state.amazonCode === 'dax';
+          const active = isDax ? d.snippets.dax : d.snippets.sql;
+          el.innerHTML =
+            '<div class="space-y-3">' +
+            '<div class="flex flex-wrap items-center justify-between gap-2">' +
+            '<div class="inline-flex p-1 rounded-lg bg-surface border border-borderHair font-mono text-xs">' +
+            '<button id="amzDaxBtn" type="button" class="px-3 py-1.5 rounded-md transition ' +
+            (isDax ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">DAX Measures</button>' +
+            '<button id="amzSqlBtn" type="button" class="px-3 py-1.5 rounded-md transition ' +
+            (!isDax ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">SQL Scoring</button></div>' +
+            '<button id="amzCopyBtn" type="button" class="px-3 py-1.5 rounded-lg bg-surface border border-borderHair font-mono text-xs font-medium text-[#F8FAFC] hover:border-amberTerm/60 hover:text-amberBright transition active:scale-95">Copy Code</button>' +
+            '</div>' +
+            '<div class="p-4 rounded-xl bg-surface border border-borderHair space-y-2">' +
+            '<div class="flex items-center justify-between font-mono text-[11px] pb-2 border-b border-borderHair">' +
+            '<span class="text-[#F8FAFC] font-semibold">' +
+            active.file +
+            '</span>' +
+            '<span class="text-[10px] text-amberBright">' +
+            active.badge +
+            '</span></div>' +
+            '<pre class="font-mono text-[11px] sm:text-xs leading-relaxed text-[#F8FAFC] overflow-x-auto"><code>' +
+            highlightCode(active.code) +
+            '</code></pre></div></div>';
+
+          document.getElementById('amzDaxBtn').addEventListener('click', function () {
+            state.amazonCode = 'dax';
+            renderAmazonTab(el, 'code');
+          });
+          document.getElementById('amzSqlBtn').addEventListener('click', function () {
+            state.amazonCode = 'sql';
+            renderAmazonTab(el, 'code');
+          });
+          document.getElementById('amzCopyBtn').addEventListener('click', function () {
+            copyText(active.code, active.badge);
+          });
+        }
+      }
+
+      /* -------------------------------------------------------------------
+         MODAL 2: META INSTAGRAM
+         ------------------------------------------------------------------- */
+      function renderMetaTab(el, tab) {
+        const d = PROJECTS.meta;
+        if (tab === 'creators') {
+          const rowsHtml = d.creators
+            .map(function (c, idx) {
+              const pct = (c.total / 749) * 100;
+              const badge = c.dual
+                ? '<span class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/40 font-bold shrink-0">DUAL-LIST</span>'
+                : '';
+              return (
+                '<div data-cidx="' +
+                idx +
+                '" class="meta-creator-row interactive-row ' +
+                (c.dual ? 'interactive-row-emerald' : '') +
+                ' rounded-xl p-2.5 grid grid-cols-12 items-center gap-2 cursor-pointer">' +
+                '<div class="col-span-5 sm:col-span-4 flex items-center gap-1.5 min-w-0">' +
+                '<span class="font-mono text-[10px] text-[#94A3B8] w-5 shrink-0">#' +
+                c.rank +
+                '</span>' +
+                '<span class="row-title font-mono text-xs ' +
+                (c.dual ? 'text-emeraldBright font-semibold' : 'text-[#CBD5E1]') +
+                ' truncate">' +
+                c.name +
+                '</span>' +
+                badge +
+                '</div>' +
+                '<div class="col-span-5 sm:col-span-6 h-2.5 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                pct.toFixed(1) +
+                '%; background-color:' +
+                (c.dual ? '#34D399' : '#FBBF24') +
+                ';"></div></div>' +
+                '<div class="col-span-2 font-mono text-xs text-right font-bold ' +
+                (c.dual ? 'text-emeraldBright' : 'text-[#F8FAFC]') +
+                '">' +
+                c.total +
+                '</div></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-3.5">' +
+            '<div id="metaCreatorReadout" class="p-3 rounded-xl bg-surface border border-borderHair font-mono text-xs text-[#CBD5E1]">' +
+            'Hover any creator bar to inspect Likes + Comments · Dual-List Ambassadors (<span class="text-emeraldBright font-semibold">Janet.Armstrong</span>, <span class="text-emeraldBright font-semibold">Zack_Kemmer93</span>) spotlighted in Emerald.' +
+            '</div>' +
+            '<div class="space-y-1.5">' +
+            rowsHtml +
+            '</div></div>';
+
+          el.querySelectorAll('.meta-creator-row').forEach(function (row) {
+            const c = d.creators[Number(row.getAttribute('data-cidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('metaCreatorReadout').innerHTML =
+                '<strong class="text-amberBright">#' +
+                c.rank +
+                ' ' +
+                c.name +
+                ':</strong> ' +
+                c.likes +
+                ' Likes + ' +
+                c.comments +
+                ' Comments = <strong class="text-emeraldBright">' +
+                c.total +
+                ' Total Engagement</strong>' +
+                (c.dual ? ' · Dual-List Ambassador' : '');
+            });
+          });
+        } else if (tab === 'hashtags') {
+          const rowsHtml = d.hashtags
+            .map(function (h, idx) {
+              const pct = (h.eng / 1802) * 100;
+              return (
+                '<div data-hidx="' +
+                idx +
+                '" class="meta-hash-row interactive-row interactive-row-emerald rounded-xl p-2.5 grid grid-cols-12 items-center gap-2 cursor-pointer">' +
+                '<span class="col-span-4 sm:col-span-3 row-title font-mono text-xs text-[#CBD5E1] truncate">' +
+                h.tag +
+                '</span>' +
+                '<div class="col-span-5 sm:col-span-6 h-2.5 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                pct.toFixed(1) +
+                '%; background-color:#34D399;"></div></div>' +
+                '<div class="col-span-3 font-mono text-xs text-right">' +
+                '<span class="text-emeraldBright font-bold">' +
+                h.eng.toLocaleString() +
+                '</span>' +
+                '<span class="text-[#94A3B8] hidden sm:inline"> (' +
+                h.posts +
+                'p)</span></div></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-3.5">' +
+            '<div id="metaHashReadout" class="p-3 rounded-xl bg-surface border border-borderHair font-mono text-xs text-[#CBD5E1]">' +
+            '<strong class="text-emeraldBright">#smile (59 posts · 19.8%):</strong> ' +
+            d.hashtags[0].note +
+            '</div>' +
+            '<div class="space-y-1.5">' +
+            rowsHtml +
+            '</div></div>';
+
+          el.querySelectorAll('.meta-hash-row').forEach(function (row) {
+            const h = d.hashtags[Number(row.getAttribute('data-hidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('metaHashReadout').innerHTML =
+                '<strong class="text-emeraldBright">' +
+                h.tag +
+                ' (' +
+                h.posts +
+                ' posts · ' +
+                h.share +
+                '):</strong> ' +
+                h.note;
+            });
+          });
+        } else if (tab === 'schema') {
+          const C = 2 * Math.PI * 54;
+          const s0 = C * 0.77;
+          const s1 = C * 0.23;
+
+          const legendHtml = d.donut
+            .map(function (seg, i) {
+              return (
+                '<div data-didx="' +
+                i +
+                '" class="meta-donut-trig interactive-row rounded-lg px-3 py-2.5 flex items-center justify-between gap-2 cursor-pointer">' +
+                '<div class="flex items-center gap-2">' +
+                '<span class="w-2.5 h-2.5 rounded-full shrink-0" style="background-color:' +
+                seg.color +
+                ';"></span>' +
+                '<span class="row-title font-mono text-xs text-[#CBD5E1]">' +
+                seg.label +
+                '</span></div>' +
+                '<span class="font-mono text-xs font-extrabold" style="color:' +
+                seg.color +
+                ';">' +
+                seg.pct +
+                '%</span></div>'
+              );
+            })
+            .join('');
+
+          const tablesHtml = d.tables
+            .map(function (t) {
+              return (
+                '<div data-tname="' +
+                t.name +
+                '" class="meta-schema-card rounded-xl p-3 bg-obsidian border border-borderHair transition-all cursor-pointer">' +
+                '<div class="flex items-center justify-between gap-1">' +
+                '<span class="font-mono text-xs font-bold text-[#F8FAFC]">' +
+                t.name +
+                '</span>' +
+                '<span class="schema-badge font-mono text-[9px] px-1.5 py-0.5 rounded bg-surface text-[#94A3B8]">Table</span></div>' +
+                '<p class="font-mono text-[10px] text-amberBright mt-1 truncate">' +
+                t.pk +
+                '</p>' +
+                '<p class="font-mono text-[10px] text-[#94A3B8] truncate">' +
+                t.cols +
+                '</p></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<div class="grid grid-cols-1 md:grid-cols-12 gap-4">' +
+            '<div class="md:col-span-5 p-4 rounded-xl bg-surface border border-borderHair flex flex-col items-center justify-center space-y-2">' +
+            '<span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] self-start">Activity Split (Hover)</span>' +
+            '<div class="relative w-36 h-36 flex items-center justify-center">' +
+            '<svg viewBox="0 0 150 150" class="w-full h-full -rotate-90 overflow-visible">' +
+            '<circle cx="75" cy="75" r="54" fill="none" stroke="#1C2430" stroke-width="17" />' +
+            '<circle data-didx="0" class="donut-slice meta-donut-trig is-active" cx="75" cy="75" r="54" fill="none" stroke="#34D399" stroke-width="17" stroke-dasharray="' +
+            s0.toFixed(1) +
+            ' ' +
+            C.toFixed(1) +
+            '" stroke-dashoffset="0" />' +
+            '<circle data-didx="1" class="donut-slice meta-donut-trig opacity-85" cx="75" cy="75" r="54" fill="none" stroke="#FB7185" stroke-width="17" stroke-dasharray="' +
+            s1.toFixed(1) +
+            ' ' +
+            C.toFixed(1) +
+            '" stroke-dashoffset="' +
+            (-s0).toFixed(1) +
+            '" /></svg>' +
+            '<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">' +
+            '<span id="metaDonutPct" class="font-mono text-2xl font-extrabold text-emeraldBright">77%</span>' +
+            '<span id="metaDonutLbl" class="font-mono text-[10px] text-[#F8FAFC]">High-Activity</span>' +
+            '</div></div></div>' +
+            '<div class="md:col-span-7 p-4 rounded-xl bg-surface border border-borderHair flex flex-col justify-between space-y-3">' +
+            '<div class="space-y-2">' +
+            legendHtml +
+            '</div>' +
+            '<p id="metaDonutDesc" class="p-3 rounded-xl bg-obsidian border border-borderHair text-xs text-[#CBD5E1]">' +
+            d.donut[0].desc +
+            '</p></div></div>' +
+            '<div class="p-4 rounded-xl bg-surface border border-borderHair space-y-3">' +
+            '<div class="flex flex-wrap items-center justify-between gap-2">' +
+            '<span class="font-mono text-[11px] font-bold text-[#F8FAFC] uppercase">7-Table Relational Schema Explorer</span>' +
+            '<span id="metaSchemaStatus" class="font-mono text-[11px] text-emeraldBright">Hover or click any table to highlight FK links</span></div>' +
+            '<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">' +
+            tablesHtml +
+            '</div></div></div>';
+
+          function setDonut(i) {
+            const seg = d.donut[i];
+            document.getElementById('metaDonutPct').textContent = seg.pct + '%';
+            document.getElementById('metaDonutPct').style.color = seg.color;
+            document.getElementById('metaDonutLbl').textContent = seg.label;
+            document.getElementById('metaDonutDesc').textContent = seg.desc;
+            el.querySelectorAll('.donut-slice').forEach(function (c) {
+              c.classList.toggle('is-active', Number(c.getAttribute('data-didx')) === i);
+            });
+          }
+
+          el.querySelectorAll('.meta-donut-trig').forEach(function (trig) {
+            const idx = Number(trig.getAttribute('data-didx'));
+            trig.addEventListener('mouseenter', function () { setDonut(idx); });
+            trig.addEventListener('click', function () { setDonut(idx); });
+          });
+
+          function setSchema(tname) {
+            const target = d.tables.find(function (t) { return t.name === tname; });
+            if (!target) return;
+            document.getElementById('metaSchemaStatus').innerHTML =
+              '<strong class="text-amberBright">' + target.name + '</strong> → FK Links: ' + target.links.join(', ');
+
+            el.querySelectorAll('.meta-schema-card').forEach(function (card) {
+              const name = card.getAttribute('data-tname');
+              const badge = card.querySelector('.schema-badge');
+              const isSelf = name === target.name;
+              const isLinked = target.links.indexOf(name) !== -1;
+
+              card.style.borderColor = isSelf ? '#FBBF24' : isLinked ? '#34D399' : '#253040';
+              card.style.backgroundColor = isSelf ? 'rgba(245,158,11,0.12)' : isLinked ? 'rgba(16,185,129,0.12)' : '#090B0E';
+              card.style.opacity = isSelf || isLinked ? '1' : '0.45';
+              badge.textContent = isSelf ? 'ACTIVE' : isLinked ? 'FK LINK' : 'Table';
+              badge.className =
+                'schema-badge font-mono text-[9px] px-1.5 py-0.5 rounded font-bold ' +
+                (isSelf
+                  ? 'bg-amberTerm text-obsidian'
+                  : isLinked
+                    ? 'bg-emeraldTerm/20 text-emeraldBright'
+                    : 'bg-surface text-[#94A3B8]');
+            });
+          }
+
+          el.querySelectorAll('.meta-schema-card').forEach(function (card) {
+            const tname = card.getAttribute('data-tname');
+            card.addEventListener('mouseenter', function () { setSchema(tname); });
+            card.addEventListener('click', function () { setSchema(tname); });
+          });
+          setSchema('users');
+        } else if (tab === 'sql') {
+          const active = d.snippets[state.metaSql] || d.snippets.rank;
+          el.innerHTML =
+            '<div class="space-y-3">' +
+            '<div class="flex flex-wrap items-center justify-between gap-2">' +
+            '<div class="inline-flex flex-wrap p-1 rounded-lg bg-surface border border-borderHair font-mono text-xs gap-1">' +
+            '<button id="metaRankBtn" type="button" class="px-3 py-1.5 rounded-md transition ' +
+            (state.metaSql === 'rank' ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">DENSE_RANK()</button>' +
+            '<button id="metaCteBtn" type="button" class="px-3 py-1.5 rounded-md transition ' +
+            (state.metaSql === 'cte' ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">Chained CTE</button>' +
+            '<button id="metaExistsBtn" type="button" class="px-3 py-1.5 rounded-md transition ' +
+            (state.metaSql === 'exists' ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">EXISTS Audit</button></div>' +
+            '<button id="metaCopyBtn" type="button" class="px-3 py-1.5 rounded-lg bg-surface border border-borderHair font-mono text-xs font-medium text-[#F8FAFC] hover:border-amberTerm/60 hover:text-amberBright transition active:scale-95">Copy Code</button>' +
+            '</div>' +
+            '<div class="p-4 rounded-xl bg-surface border border-borderHair space-y-2">' +
+            '<div class="flex items-center justify-between font-mono text-[11px] pb-2 border-b border-borderHair">' +
+            '<span class="text-[#F8FAFC] font-semibold">' +
+            active.file +
+            '</span>' +
+            '<span class="text-[10px] text-amberBright">' +
+            active.badge +
+            '</span></div>' +
+            '<pre class="font-mono text-[11px] sm:text-xs leading-relaxed text-[#F8FAFC] overflow-x-auto"><code>' +
+            highlightCode(active.code) +
+            '</code></pre></div></div>';
+
+          document.getElementById('metaRankBtn').addEventListener('click', function () {
+            state.metaSql = 'rank';
+            renderMetaTab(el, 'sql');
+          });
+          document.getElementById('metaCteBtn').addEventListener('click', function () {
+            state.metaSql = 'cte';
+            renderMetaTab(el, 'sql');
+          });
+          document.getElementById('metaExistsBtn').addEventListener('click', function () {
+            state.metaSql = 'exists';
+            renderMetaTab(el, 'sql');
+          });
+          document.getElementById('metaCopyBtn').addEventListener('click', function () {
+            copyText(active.code, active.badge);
+          });
+        }
+      }
+
+      /* -------------------------------------------------------------------
+         MODAL 3: ZOMATO GLOBAL EXPANSION
+         ------------------------------------------------------------------- */
+      function renderZomatoTab(el, tab) {
+        const d = PROJECTS.zomato;
+        if (tab === 'targets') {
+          const rowsHtml = d.targets
+            .map(function (t, idx) {
+              const barPct = (t.rating / 5) * 100;
+              return (
+                '<div data-ztidx="' +
+                idx +
+                '" class="z-target-row interactive-row interactive-row-emerald rounded-xl p-3 space-y-2 cursor-pointer">' +
+                '<div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">' +
+                '<div class="flex flex-wrap items-center gap-2">' +
+                '<span class="text-[#94A3B8] text-[10px]">0' +
+                (idx + 1) +
+                '</span>' +
+                '<span class="row-title text-[#F8FAFC] font-semibold">' +
+                t.country +
+                '</span>' +
+                '<span class="text-[10px] px-2 py-0.5 rounded border font-semibold ' +
+                t.tagCls +
+                '">' +
+                t.tag +
+                '</span></div>' +
+                '<div class="flex items-center gap-3">' +
+                '<span class="text-[11px] text-[#CBD5E1]">' +
+                t.listings +
+                ' listings</span>' +
+                '<span class="text-emeraldBright font-extrabold">' +
+                t.rating.toFixed(2) +
+                '★</span></div></div>' +
+                '<div class="h-2.5 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                barPct.toFixed(1) +
+                '%; background-color:' +
+                t.barColor +
+                ';"></div></div></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<div class="space-y-2">' +
+            rowsHtml +
+            '</div>' +
+            '<div class="p-3.5 rounded-xl bg-surface border border-emeraldTerm/35 flex flex-col sm:flex-row sm:items-center justify-between gap-2">' +
+            '<div>' +
+            '<span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block">Market Intelligence Readout</span>' +
+            '<span id="zTargetTitle" class="font-mono text-xs font-bold text-emeraldBright mt-0.5 block">Indonesia — 4.30★ Avg Rating · 21 Listings</span>' +
+            '<p id="zTargetNote" class="text-xs text-[#CBD5E1] mt-1">' +
+            d.targets[0].note +
+            '</p></div>' +
+            '<span id="zTargetTag" class="font-mono text-[11px] font-bold px-2.5 py-1 rounded bg-emeraldTerm/15 text-emeraldBright border border-emeraldTerm/35 shrink-0 self-start sm:self-center">Top Priority</span>' +
+            '</div>' +
+            '<div class="px-3.5 py-2.5 rounded-xl bg-surface/70 border border-borderHair font-mono text-[11px] text-[#94A3B8] flex flex-wrap items-center justify-between gap-2">' +
+            '<span><strong class="text-amberBright">Saturated Benchmark:</strong> India holds <strong class="text-[#F8FAFC]">8,652 listings</strong> (90.6% of dataset) at <strong class="text-[#F8FAFC]">3.52★</strong> avg rating.</span>' +
+            '<span class="text-emeraldBright">High-Rating / Low-Density Targets</span>' +
+            '</div></div>';
+
+          el.querySelectorAll('.z-target-row').forEach(function (row) {
+            const t = d.targets[Number(row.getAttribute('data-ztidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('zTargetTitle').textContent =
+                t.country + ' — ' + t.rating.toFixed(2) + '★ Avg Rating · ' + t.listings + ' Listings';
+              document.getElementById('zTargetNote').textContent = t.note;
+              document.getElementById('zTargetTag').textContent = t.tag;
+            });
+          });
+        } else if (tab === 'lift') {
+          const featHtml = d.features
+            .map(function (f, i) {
+              return (
+                '<div data-fidx="' +
+                i +
+                '" class="z-feat-row interactive-row ' +
+                f.rowCls +
+                ' rounded-xl p-4 space-y-3 cursor-pointer">' +
+                '<div class="flex items-center justify-between font-mono text-xs">' +
+                '<span class="row-title text-[#F8FAFC] font-semibold">' +
+                f.name +
+                '</span>' +
+                '<span class="font-extrabold px-2.5 py-0.5 rounded bg-surface border border-borderHair" style="color:' +
+                f.color +
+                ';">' +
+                f.lift +
+                ' Lift</span></div>' +
+                '<div class="space-y-1.5 font-mono text-[11px]">' +
+                '<div class="flex justify-between"><span class="text-[#CBD5E1]">With Feature</span><span class="font-bold" style="color:' +
+                f.color +
+                ';">' +
+                f.yes.toFixed(2) +
+                '★</span></div>' +
+                '<div class="h-2.5 rounded-full chart-track overflow-hidden"><div class="row-fill h-full rounded-full" style="width:' +
+                (f.yes / 5) * 100 +
+                '%; background-color:' +
+                f.color +
+                ';"></div></div>' +
+                '<div class="flex justify-between pt-1.5"><span class="text-[#94A3B8]">Without Feature</span><span class="text-[#CBD5E1]">' +
+                f.no.toFixed(2) +
+                '★</span></div>' +
+                '<div class="h-2 rounded-full chart-track overflow-hidden"><div class="h-full rounded-full bg-[#F8FAFC]" style="width:' +
+                (f.no / 5) * 100 +
+                '%;"></div></div></div></div>'
+              );
+            })
+            .join('');
+
+          const priceHtml = d.priceTiers
+            .map(function (p, i) {
+              return (
+                '<div data-pidx="' +
+                i +
+                '" class="z-price-row interactive-row rounded-xl p-2.5 grid grid-cols-12 items-center gap-2 cursor-pointer">' +
+                '<span class="col-span-5 sm:col-span-4 row-title font-mono text-[11px] text-[#CBD5E1] truncate">' +
+                p.tier +
+                '</span>' +
+                '<div class="col-span-4 sm:col-span-5 h-2 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                (p.rating / 5) * 100 +
+                '%; background-color:' +
+                p.color +
+                ';"></div></div>' +
+                '<span class="col-span-3 font-mono text-[11px] text-right font-bold" style="color:' +
+                p.color +
+                ';">' +
+                p.rating.toFixed(2) +
+                '★ · ' +
+                p.share +
+                '</span></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<p id="zLiftReadout" class="p-3.5 rounded-xl bg-surface border border-borderHair font-mono text-xs text-[#CBD5E1]">' +
+            '<strong class="text-emeraldBright">Table Booking (+0.67★):</strong> ' +
+            d.features[0].note +
+            '</p>' +
+            '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">' +
+            featHtml +
+            '</div>' +
+            '<div class="space-y-2">' +
+            '<span class="font-mono text-[10px] uppercase tracking-wider text-[#94A3B8] block">Price-Tier (1–4) Distribution &amp; Rating</span>' +
+            '<div class="space-y-1.5">' +
+            priceHtml +
+            '</div></div></div>';
+
+          el.querySelectorAll('.z-feat-row').forEach(function (row) {
+            const f = d.features[Number(row.getAttribute('data-fidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('zLiftReadout').innerHTML =
+                '<strong style="color:' + f.color + ';">' + f.name + ' (' + f.lift + '):</strong> ' + f.note;
+            });
+          });
+
+          el.querySelectorAll('.z-price-row').forEach(function (row) {
+            const p = d.priceTiers[Number(row.getAttribute('data-pidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('zLiftReadout').innerHTML =
+                '<strong style="color:' + p.color + ';">' + p.tier + ' (' + p.rating.toFixed(2) + '★):</strong> ' + p.note;
+            });
+          });
+        } else if (tab === 'cuisines') {
+          const byRating = state.zomatoSort === 'rating';
+          const list = d.cuisines.slice().sort(function (a, b) {
+            return byRating ? b.rating - a.rating : b.count - a.count;
+          });
+
+          const rowsHtml = list
+            .map(function (c, idx) {
+              const pct = byRating ? (c.rating / 5) * 100 : (c.count / 3960) * 100;
+              return (
+                '<div data-cidx="' +
+                idx +
+                '" class="z-cuis-row interactive-row ' +
+                (byRating ? 'interactive-row-emerald' : '') +
+                ' rounded-xl p-2.5 grid grid-cols-12 items-center gap-2 cursor-pointer">' +
+                '<span class="col-span-4 sm:col-span-3 row-title font-mono text-xs text-[#CBD5E1] truncate">' +
+                c.name +
+                '</span>' +
+                '<div class="col-span-5 sm:col-span-6 h-2.5 rounded-full chart-track overflow-hidden">' +
+                '<div class="row-fill h-full rounded-full" style="width:' +
+                pct.toFixed(1) +
+                '%; background-color:' +
+                (byRating ? '#34D399' : '#FBBF24') +
+                ';"></div></div>' +
+                '<div class="col-span-3 font-mono text-xs text-right font-bold ' +
+                (byRating ? 'text-emeraldBright' : 'text-amberBright') +
+                '">' +
+                (byRating ? c.rating.toFixed(2) + '★' : c.count.toLocaleString()) +
+                '</div></div>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-3.5">' +
+            '<div class="flex flex-wrap items-center justify-between gap-2">' +
+            '<span id="zCuisReadout" class="font-mono text-xs text-[#CBD5E1]">Hover any cuisine bar to compare listing volume vs avg rating.</span>' +
+            '<div class="inline-flex p-1 rounded-lg bg-surface border border-borderHair font-mono text-[11px]">' +
+            '<button id="zSortCount" type="button" class="px-3 py-1 rounded-md transition ' +
+            (!byRating ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">By Volume</button>' +
+            '<button id="zSortRating" type="button" class="px-3 py-1 rounded-md transition ' +
+            (byRating ? 'bg-amberTerm text-obsidian font-bold' : 'text-[#CBD5E1] hover:text-[#F8FAFC]') +
+            '">By Rating</button></div></div>' +
+            '<div class="space-y-1.5">' +
+            rowsHtml +
+            '</div></div>';
+
+          document.getElementById('zSortRating').addEventListener('click', function () {
+            state.zomatoSort = 'rating';
+            renderZomatoTab(el, 'cuisines');
+          });
+          document.getElementById('zSortCount').addEventListener('click', function () {
+            state.zomatoSort = 'count';
+            renderZomatoTab(el, 'cuisines');
+          });
+          el.querySelectorAll('.z-cuis-row').forEach(function (row) {
+            const c = list[Number(row.getAttribute('data-cidx'))];
+            row.addEventListener('mouseenter', function () {
+              document.getElementById('zCuisReadout').innerHTML =
+                '<strong class="text-[#F8FAFC]">' +
+                c.name +
+                ':</strong> <span class="text-emeraldBright font-bold">' +
+                c.rating.toFixed(2) +
+                '★ Avg Rating</span> · <span class="text-amberBright">' +
+                c.count.toLocaleString() +
+                ' Listings</span>';
+            });
+          });
+        } else if (tab === 'trend') {
+          const W = 620;
+          const H = 225;
+          const padL = 48;
+          const padR = 26;
+          const padT = 26;
+          const padB = 34;
+          const minY = 990;
+          const maxY = 1125;
+
+          const meanVal = Math.round(
+            d.trend.reduce(function (acc, cur) { return acc + cur.count; }, 0) / d.trend.length
+          );
+          const meanY = padT + ((maxY - meanVal) / (maxY - minY)) * (H - padT - padB);
+
+          const pts = d.trend.map(function (pt, i) {
+            const x = padL + (i / (d.trend.length - 1)) * (W - padL - padR);
+            const y = padT + ((maxY - pt.count) / (maxY - minY)) * (H - padT - padB);
+            return { pt: pt, x: x, y: y };
+          });
+
+          const poly = pts
+            .map(function (p) { return p.x.toFixed(1) + ',' + p.y.toFixed(1); })
+            .join(' ');
+          const area =
+            'M ' +
+            pts[0].x.toFixed(1) +
+            ',' +
+            (H - padB) +
+            ' L ' +
+            pts.map(function (p) { return p.x.toFixed(1) + ',' + p.y.toFixed(1); }).join(' L ') +
+            ' L ' +
+            pts[pts.length - 1].x.toFixed(1) +
+            ',' +
+            (H - padB) +
+            ' Z';
+
+          const gridSvg = [1000, 1050, 1100]
+            .map(function (v) {
+              const y = padT + ((maxY - v) / (maxY - minY)) * (H - padT - padB);
+              return (
+                '<line x1="' + padL + '" y1="' + y.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + y.toFixed(1) + '" stroke="#2B3647" stroke-dasharray="4 4" />' +
+                '<text x="' + (padL - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#94A3B8" font-size="10" font-family="JetBrains Mono, monospace">' + v + '</text>'
+              );
+            })
+            .join('');
+
+          const nodesSvg = pts
+            .map(function (p, i) {
+              return (
+                '<g class="z-node-grp cursor-pointer" data-nidx="' + i + '">' +
+                '<circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="18" fill="transparent" />' +
+                '<circle class="z-dot-pulse svg-pulse-ring" cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="6" fill="none" stroke="#FBBF24" stroke-width="2" style="display:none;" />' +
+                '<circle class="z-dot-core" cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="5" fill="#090B0E" stroke="#34D399" stroke-width="2.4" />' +
+                '<text class="z-yr-lbl" x="' + p.x.toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" fill="#CBD5E1" font-size="10.5" font-family="JetBrains Mono, monospace">' + p.pt.year + '</text></g>'
+              );
+            })
+            .join('');
+
+          el.innerHTML =
+            '<div class="space-y-4">' +
+            '<div class="p-3.5 rounded-xl bg-surface border border-borderHair flex flex-wrap items-center justify-between gap-2">' +
+            '<p id="zTrendReadout" class="font-mono text-xs sm:text-sm text-[#F8FAFC]">' +
+            '<strong class="text-amberBright">2018:</strong> <strong>1,102</strong> openings (<span class="text-emeraldBright font-bold">+1.5% YoY</span>)' +
+            '</p>' +
+            '<span class="font-mono text-[10px] text-emeraldBright">9-Yr Mean: ' + meanVal + ' / yr · Move cursor across chart</span></div>' +
+            '<div class="relative rounded-xl bg-surface border border-borderHair p-3 overflow-x-auto">' +
+            '<div id="zTrendTooltip" class="pointer-events-none absolute top-4 right-4 z-10 px-3 py-1.5 rounded-lg bg-obsidian/95 border border-amberTerm/55 font-mono text-[11px] text-[#F8FAFC] shadow-lg">' +
+            '<span class="text-amberBright font-bold">2018</span> · 1,102 <span class="text-emeraldBright">(+1.5%)</span>' +
+            '</div>' +
+            '<svg id="zTrendSvg" viewBox="0 0 ' + W + ' ' + H + '" class="w-full h-auto min-w-[440px] cursor-crosshair" role="img" aria-label="Zomato restaurant openings 2010 to 2018">' +
+            '<defs><linearGradient id="zAreaGrad" x1="0" y1="0" x2="0" y2="1">' +
+            '<stop offset="0%" stop-color="#F59E0B" stop-opacity="0.30" />' +
+            '<stop offset="100%" stop-color="#10B981" stop-opacity="0.02" />' +
+            '</linearGradient></defs>' +
+            gridSvg +
+            '<line x1="' + padL + '" y1="' + meanY.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + meanY.toFixed(1) + '" stroke="#34D399" stroke-width="1.3" stroke-dasharray="5 4" opacity="0.7" />' +
+            '<text x="' + (W - padR) + '" y="' + (meanY - 5).toFixed(1) + '" text-anchor="end" fill="#34D399" font-size="9.5" font-family="JetBrains Mono, monospace">Mean ' + meanVal + '</text>' +
+            '<line id="zGuideLine" x1="' + pts[pts.length - 1].x.toFixed(1) + '" y1="' + padT + '" x2="' + pts[pts.length - 1].x.toFixed(1) + '" y2="' + (H - padB) + '" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.88" />' +
+            '<path d="' + area + '" fill="url(#zAreaGrad)" />' +
+            '<polyline fill="none" stroke="#FBBF24" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="' + poly + '" />' +
+            nodesSvg +
+            '</svg></div></div>';
+
+          function setNode(idx) {
+            const p = pts[idx];
+            const guide = document.getElementById('zGuideLine');
+            guide.setAttribute('x1', p.x.toFixed(1));
+            guide.setAttribute('x2', p.x.toFixed(1));
+
+            const isNeg = p.pt.yoy.indexOf('-') === 0;
+            const yoyCls = p.pt.yoy === 'Base Year' ? 'text-[#94A3B8]' : isNeg ? 'text-coralAlert' : 'text-emeraldBright';
+            document.getElementById('zTrendReadout').innerHTML =
+              '<strong class="text-amberBright">' + p.pt.year + ':</strong> <strong>' + p.pt.count.toLocaleString() +
+              '</strong> restaurant openings (<span class="' + yoyCls + ' font-bold">' + p.pt.yoy + '</span>)';
+
+            const tooltip = document.getElementById('zTrendTooltip');
+            if (tooltip) {
+              tooltip.innerHTML =
+                '<span class="text-amberBright font-bold">' + p.pt.year + '</span> · ' +
+                p.pt.count.toLocaleString() + ' <span class="' + yoyCls + '">(' + p.pt.yoy + ')</span>';
+            }
+
+            el.querySelectorAll('.z-node-grp').forEach(function (g, i) {
+              const active = i === idx;
+              g.querySelector('.z-dot-pulse').style.display = active ? 'inline' : 'none';
+              const core = g.querySelector('.z-dot-core');
+              core.setAttribute('r', active ? '7' : '5');
+              core.setAttribute('fill', active ? '#FBBF24' : '#090B0E');
+              core.setAttribute('stroke', active ? '#F8FAFC' : '#34D399');
+              const lbl = g.querySelector('.z-yr-lbl');
+              lbl.setAttribute('fill', active ? '#FBBF24' : '#CBD5E1');
+              lbl.setAttribute('font-weight', active ? '800' : '400');
+            });
+          }
+
+          const trendSvg = document.getElementById('zTrendSvg');
+          if (trendSvg) {
+            trendSvg.addEventListener('mousemove', function (e) {
+              const rect = trendSvg.getBoundingClientRect();
+              const relX = ((e.clientX - rect.left) / rect.width) * W;
+              let nearest = 0;
+              let minDist = Infinity;
+              pts.forEach(function (p, i) {
+                const dist = Math.abs(p.x - relX);
+                if (dist < minDist) {
+                  minDist = dist;
+                  nearest = i;
+                }
+              });
+              setNode(nearest);
+            });
+          }
+
+          el.querySelectorAll('.z-node-grp').forEach(function (g) {
+            const idx = Number(g.getAttribute('data-nidx'));
+            g.addEventListener('mouseenter', function () { setNode(idx); });
+            g.addEventListener('click', function () { setNode(idx); });
+          });
+          setNode(pts.length - 1);
+        }
+      }
+
+      /* -------------------------------------------------------------------
+         8. BIND PROJECT MODALS, RESUME MODAL & CONTACT COPY BUTTONS
+         ------------------------------------------------------------------- */
+      document.querySelectorAll('.open-project-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openProjectModal(btn.getAttribute('data-open-modal'));
+        });
+      });
+
+      if (closeProjectModalBtn) {
+        closeProjectModalBtn.addEventListener('click', closeProjectModal);
+      }
+      if (projectModal) {
+        projectModal.addEventListener('click', function (e) {
+          if (e.target === projectModal) closeProjectModal();
+        });
+      }
+
+      // Floating In-Page Resume Modal
+      const resumeModal = document.getElementById('resumeModal');
+      const resumeIframe = document.getElementById('resumeIframe');
+      const resumeSpinner = document.getElementById('resumeSpinner');
+      const resumeFallbackBox = document.getElementById('resumeFallbackBox');
+      const closeResumeModalBtn = document.getElementById('closeResumeModalBtn');
+      let resumeLoaded = false;
+
+      function openResumeModal() {
+        if (!resumeModal) return;
+        if (!isResumeConfigured) {
+          if (resumeSpinner) resumeSpinner.classList.add('hidden');
+          if (resumeFallbackBox) resumeFallbackBox.classList.remove('hidden');
+        } else if (!resumeLoaded && resumeIframe) {
+          if (resumeFallbackBox) resumeFallbackBox.classList.add('hidden');
+          if (resumeSpinner) resumeSpinner.classList.remove('hidden');
+          resumeIframe.src = RESUME_PREVIEW_URL;
+          resumeIframe.addEventListener(
+            'load',
+            function () {
+              if (resumeSpinner) resumeSpinner.classList.add('hidden');
+            },
+            { once: true }
+          );
+          resumeLoaded = true;
+        }
+        resumeModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeResumeModal() {
+        if (!resumeModal) return;
+        resumeModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.open-resume-btn').forEach(function (btn) {
+        btn.addEventListener('click', openResumeModal);
+      });
+      if (closeResumeModalBtn) {
+        closeResumeModalBtn.addEventListener('click', closeResumeModal);
+      }
+      if (resumeModal) {
+        resumeModal.addEventListener('click', function (e) {
+          if (e.target === resumeModal) closeResumeModal();
+        });
+      }
+
+      // Global ESC Key Handler
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (resumeModal && !resumeModal.classList.contains('hidden')) closeResumeModal();
+          if (projectModal && !projectModal.classList.contains('hidden')) closeProjectModal();
+        }
+      });
+
+      // Contact Copy Buttons with Inline Feedback
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      const copyPhoneBtn = document.getElementById('copyPhoneBtn');
+      if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', function () {
+          copyText('dharakaushik984@gmail.com', 'Email');
+        });
+      }
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener('click', function () {
+          copyText('+91 9948296595', 'Phone number');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
